@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B517EB952BEB11E500C8A942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EB942BEB11E500C8A942 /* AppDelegate.swift */; };
+		B517EB972BEB11E500C8A942 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EB962BEB11E500C8A942 /* SceneDelegate.swift */; };
+		B517EB992BEB11E500C8A942 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EB982BEB11E500C8A942 /* ViewController.swift */; };
+		B517EB9C2BEB11E500C8A942 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B517EB9B2BEB11E500C8A942 /* Base */; };
+		B517EB9F2BEB11E500C8A942 /* Chaeum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B517EB9D2BEB11E500C8A942 /* Chaeum.xcdatamodeld */; };
+		B517EBA12BEB11E600C8A942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B517EBA02BEB11E600C8A942 /* Assets.xcassets */; };
+		B517EBA42BEB11E600C8A942 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B517EBA32BEB11E600C8A942 /* Base */; };
+		B517EBAF2BEB11E600C8A942 /* ChaeumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EBAE2BEB11E600C8A942 /* ChaeumTests.swift */; };
+		B517EBB92BEB11E600C8A942 /* ChaeumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EBB82BEB11E600C8A942 /* ChaeumUITests.swift */; };
+		B517EBBB2BEB11E600C8A942 /* ChaeumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EBBA2BEB11E600C8A942 /* ChaeumUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B517EBAB2BEB11E600C8A942 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B517EB892BEB11E500C8A942 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B517EB902BEB11E500C8A942;
+			remoteInfo = Chaeum;
+		};
+		B517EBB52BEB11E600C8A942 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B517EB892BEB11E500C8A942 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B517EB902BEB11E500C8A942;
+			remoteInfo = Chaeum;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B517EB912BEB11E500C8A942 /* Chaeum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chaeum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B517EB942BEB11E500C8A942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B517EB962BEB11E500C8A942 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B517EB982BEB11E500C8A942 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B517EB9B2BEB11E500C8A942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B517EB9E2BEB11E500C8A942 /* Chaeum.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chaeum.xcdatamodel; sourceTree = "<group>"; };
+		B517EBA02BEB11E600C8A942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B517EBA32BEB11E600C8A942 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B517EBA52BEB11E600C8A942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B517EBAA2BEB11E600C8A942 /* ChaeumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChaeumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B517EBAE2BEB11E600C8A942 /* ChaeumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaeumTests.swift; sourceTree = "<group>"; };
+		B517EBB42BEB11E600C8A942 /* ChaeumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChaeumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B517EBB82BEB11E600C8A942 /* ChaeumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaeumUITests.swift; sourceTree = "<group>"; };
+		B517EBBA2BEB11E600C8A942 /* ChaeumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaeumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B517EB8E2BEB11E500C8A942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B517EBA72BEB11E600C8A942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B517EBB12BEB11E600C8A942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B517EB882BEB11E500C8A942 = {
+			isa = PBXGroup;
+			children = (
+				B517EB932BEB11E500C8A942 /* Chaeum */,
+				B517EBAD2BEB11E600C8A942 /* ChaeumTests */,
+				B517EBB72BEB11E600C8A942 /* ChaeumUITests */,
+				B517EB922BEB11E500C8A942 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B517EB922BEB11E500C8A942 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B517EB912BEB11E500C8A942 /* Chaeum.app */,
+				B517EBAA2BEB11E600C8A942 /* ChaeumTests.xctest */,
+				B517EBB42BEB11E600C8A942 /* ChaeumUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B517EB932BEB11E500C8A942 /* Chaeum */ = {
+			isa = PBXGroup;
+			children = (
+				B517EB942BEB11E500C8A942 /* AppDelegate.swift */,
+				B517EB962BEB11E500C8A942 /* SceneDelegate.swift */,
+				B517EB982BEB11E500C8A942 /* ViewController.swift */,
+				B517EB9A2BEB11E500C8A942 /* Main.storyboard */,
+				B517EBA02BEB11E600C8A942 /* Assets.xcassets */,
+				B517EBA22BEB11E600C8A942 /* LaunchScreen.storyboard */,
+				B517EBA52BEB11E600C8A942 /* Info.plist */,
+				B517EB9D2BEB11E500C8A942 /* Chaeum.xcdatamodeld */,
+			);
+			path = Chaeum;
+			sourceTree = "<group>";
+		};
+		B517EBAD2BEB11E600C8A942 /* ChaeumTests */ = {
+			isa = PBXGroup;
+			children = (
+				B517EBAE2BEB11E600C8A942 /* ChaeumTests.swift */,
+			);
+			path = ChaeumTests;
+			sourceTree = "<group>";
+		};
+		B517EBB72BEB11E600C8A942 /* ChaeumUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B517EBB82BEB11E600C8A942 /* ChaeumUITests.swift */,
+				B517EBBA2BEB11E600C8A942 /* ChaeumUITestsLaunchTests.swift */,
+			);
+			path = ChaeumUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B517EB902BEB11E500C8A942 /* Chaeum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B517EBBE2BEB11E600C8A942 /* Build configuration list for PBXNativeTarget "Chaeum" */;
+			buildPhases = (
+				B517EB8D2BEB11E500C8A942 /* Sources */,
+				B517EB8E2BEB11E500C8A942 /* Frameworks */,
+				B517EB8F2BEB11E500C8A942 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chaeum;
+			productName = Chaeum;
+			productReference = B517EB912BEB11E500C8A942 /* Chaeum.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B517EBA92BEB11E600C8A942 /* ChaeumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B517EBC12BEB11E600C8A942 /* Build configuration list for PBXNativeTarget "ChaeumTests" */;
+			buildPhases = (
+				B517EBA62BEB11E600C8A942 /* Sources */,
+				B517EBA72BEB11E600C8A942 /* Frameworks */,
+				B517EBA82BEB11E600C8A942 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B517EBAC2BEB11E600C8A942 /* PBXTargetDependency */,
+			);
+			name = ChaeumTests;
+			productName = ChaeumTests;
+			productReference = B517EBAA2BEB11E600C8A942 /* ChaeumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B517EBB32BEB11E600C8A942 /* ChaeumUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B517EBC42BEB11E600C8A942 /* Build configuration list for PBXNativeTarget "ChaeumUITests" */;
+			buildPhases = (
+				B517EBB02BEB11E600C8A942 /* Sources */,
+				B517EBB12BEB11E600C8A942 /* Frameworks */,
+				B517EBB22BEB11E600C8A942 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B517EBB62BEB11E600C8A942 /* PBXTargetDependency */,
+			);
+			name = ChaeumUITests;
+			productName = ChaeumUITests;
+			productReference = B517EBB42BEB11E600C8A942 /* ChaeumUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B517EB892BEB11E500C8A942 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					B517EB902BEB11E500C8A942 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					B517EBA92BEB11E600C8A942 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = B517EB902BEB11E500C8A942;
+					};
+					B517EBB32BEB11E600C8A942 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = B517EB902BEB11E500C8A942;
+					};
+				};
+			};
+			buildConfigurationList = B517EB8C2BEB11E500C8A942 /* Build configuration list for PBXProject "Chaeum" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B517EB882BEB11E500C8A942;
+			productRefGroup = B517EB922BEB11E500C8A942 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B517EB902BEB11E500C8A942 /* Chaeum */,
+				B517EBA92BEB11E600C8A942 /* ChaeumTests */,
+				B517EBB32BEB11E600C8A942 /* ChaeumUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B517EB8F2BEB11E500C8A942 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B517EBA12BEB11E600C8A942 /* Assets.xcassets in Resources */,
+				B517EBA42BEB11E600C8A942 /* Base in Resources */,
+				B517EB9C2BEB11E500C8A942 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B517EBA82BEB11E600C8A942 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B517EBB22BEB11E600C8A942 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B517EB8D2BEB11E500C8A942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B517EB992BEB11E500C8A942 /* ViewController.swift in Sources */,
+				B517EB952BEB11E500C8A942 /* AppDelegate.swift in Sources */,
+				B517EB9F2BEB11E500C8A942 /* Chaeum.xcdatamodeld in Sources */,
+				B517EB972BEB11E500C8A942 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B517EBA62BEB11E600C8A942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B517EBAF2BEB11E600C8A942 /* ChaeumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B517EBB02BEB11E600C8A942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B517EBB92BEB11E600C8A942 /* ChaeumUITests.swift in Sources */,
+				B517EBBB2BEB11E600C8A942 /* ChaeumUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B517EBAC2BEB11E600C8A942 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B517EB902BEB11E500C8A942 /* Chaeum */;
+			targetProxy = B517EBAB2BEB11E600C8A942 /* PBXContainerItemProxy */;
+		};
+		B517EBB62BEB11E600C8A942 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B517EB902BEB11E500C8A942 /* Chaeum */;
+			targetProxy = B517EBB52BEB11E600C8A942 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B517EB9A2BEB11E500C8A942 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B517EB9B2BEB11E500C8A942 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B517EBA22BEB11E600C8A942 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B517EBA32BEB11E600C8A942 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B517EBBC2BEB11E600C8A942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B517EBBD2BEB11E600C8A942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B517EBBF2BEB11E600C8A942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AU24ZRJ649;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chaeum/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gomminjae.Chaeum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B517EBC02BEB11E600C8A942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AU24ZRJ649;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chaeum/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gomminjae.Chaeum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B517EBC22BEB11E600C8A942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AU24ZRJ649;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gomminjae.ChaeumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chaeum.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Chaeum";
+			};
+			name = Debug;
+		};
+		B517EBC32BEB11E600C8A942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AU24ZRJ649;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gomminjae.ChaeumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chaeum.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Chaeum";
+			};
+			name = Release;
+		};
+		B517EBC52BEB11E600C8A942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AU24ZRJ649;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gomminjae.ChaeumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Chaeum;
+			};
+			name = Debug;
+		};
+		B517EBC62BEB11E600C8A942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AU24ZRJ649;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = gomminjae.ChaeumUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Chaeum;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B517EB8C2BEB11E500C8A942 /* Build configuration list for PBXProject "Chaeum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B517EBBC2BEB11E600C8A942 /* Debug */,
+				B517EBBD2BEB11E600C8A942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B517EBBE2BEB11E600C8A942 /* Build configuration list for PBXNativeTarget "Chaeum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B517EBBF2BEB11E600C8A942 /* Debug */,
+				B517EBC02BEB11E600C8A942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B517EBC12BEB11E600C8A942 /* Build configuration list for PBXNativeTarget "ChaeumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B517EBC22BEB11E600C8A942 /* Debug */,
+				B517EBC32BEB11E600C8A942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B517EBC42BEB11E600C8A942 /* Build configuration list for PBXNativeTarget "ChaeumUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B517EBC52BEB11E600C8A942 /* Debug */,
+				B517EBC62BEB11E600C8A942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B517EB9D2BEB11E500C8A942 /* Chaeum.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B517EB9E2BEB11E500C8A942 /* Chaeum.xcdatamodel */,
+			);
+			currentVersion = B517EB9E2BEB11E500C8A942 /* Chaeum.xcdatamodel */;
+			path = Chaeum.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B517EB892BEB11E500C8A942 /* Project object */;
+}
