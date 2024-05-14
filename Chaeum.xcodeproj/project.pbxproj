@@ -11,6 +11,17 @@
 		AE3C26B47CC28821F0C431A8 /* Pods_Chaeum_ChaeumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC14A0AE79D109CE92B180D7 /* Pods_Chaeum_ChaeumUITests.framework */; };
 		B500B9B12BF0A40C0045A2D5 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9B02BF0A40C0045A2D5 /* TabbarController.swift */; };
 		B500B9B42BF0A67D0045A2D5 /* TabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9B32BF0A67D0045A2D5 /* TabbarItem.swift */; };
+		B500B9B72BF11AAA0045A2D5 /* LoginViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9B62BF11AAA0045A2D5 /* LoginViewControler.swift */; };
+		B500B9B92BF1D15F0045A2D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9B82BF1D15F0045A2D5 /* User.swift */; };
+		B500B9BB2BF1D1AA0045A2D5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9BA2BF1D1AA0045A2D5 /* LoginViewModel.swift */; };
+		B500B9BD2BF1D2EA0045A2D5 /* LoginReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9BC2BF1D2EA0045A2D5 /* LoginReactor.swift */; };
+		B500B9C52BF24FBE0045A2D5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9C42BF24FBE0045A2D5 /* Coordinator.swift */; };
+		B500B9C72BF339080045A2D5 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9C62BF339080045A2D5 /* TestViewController.swift */; };
+		B500B9C92BF342610045A2D5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9C82BF342610045A2D5 /* HomeViewModel.swift */; };
+		B500B9CE2BF344AA0045A2D5 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9CD2BF344AA0045A2D5 /* NewsViewModel.swift */; };
+		B500B9D12BF345B60045A2D5 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9D02BF345B60045A2D5 /* SettingViewController.swift */; };
+		B500B9D32BF345C10045A2D5 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9D22BF345C10045A2D5 /* SettingViewModel.swift */; };
+		B500B9D52BF34A1E0045A2D5 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9D42BF34A1E0045A2D5 /* NewsViewController.swift */; };
 		B517EB952BEB11E500C8A942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EB942BEB11E500C8A942 /* AppDelegate.swift */; };
 		B517EB972BEB11E500C8A942 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EB962BEB11E500C8A942 /* SceneDelegate.swift */; };
 		B517EB9F2BEB11E500C8A942 /* Chaeum.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B517EB9D2BEB11E500C8A942 /* Chaeum.xcdatamodeld */; };
@@ -20,7 +31,6 @@
 		B517EBB92BEB11E600C8A942 /* ChaeumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EBB82BEB11E600C8A942 /* ChaeumUITests.swift */; };
 		B517EBBB2BEB11E600C8A942 /* ChaeumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EBBA2BEB11E600C8A942 /* ChaeumUITestsLaunchTests.swift */; };
 		B517EBD02BEB21B800C8A942 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EBCF2BEB21B800C8A942 /* HomeViewController.swift */; };
-		B517EBD32BEB225F00C8A942 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EBD22BEB225F00C8A942 /* Coordinator.swift */; };
 		B69D910077B26DB43B401A0A /* Pods_ChaeumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FE7C5CDA94BA33713AC656 /* Pods_ChaeumTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +60,17 @@
 		B4FE7C5CDA94BA33713AC656 /* Pods_ChaeumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChaeumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B500B9B02BF0A40C0045A2D5 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		B500B9B32BF0A67D0045A2D5 /* TabbarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarItem.swift; sourceTree = "<group>"; };
+		B500B9B62BF11AAA0045A2D5 /* LoginViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControler.swift; sourceTree = "<group>"; };
+		B500B9B82BF1D15F0045A2D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B500B9BA2BF1D1AA0045A2D5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B500B9BC2BF1D2EA0045A2D5 /* LoginReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReactor.swift; sourceTree = "<group>"; };
+		B500B9C42BF24FBE0045A2D5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B500B9C62BF339080045A2D5 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		B500B9C82BF342610045A2D5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B500B9CD2BF344AA0045A2D5 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		B500B9D02BF345B60045A2D5 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B500B9D22BF345C10045A2D5 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		B500B9D42BF34A1E0045A2D5 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		B517EB912BEB11E500C8A942 /* Chaeum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chaeum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B517EB942BEB11E500C8A942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B517EB962BEB11E500C8A942 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +84,6 @@
 		B517EBB82BEB11E600C8A942 /* ChaeumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaeumUITests.swift; sourceTree = "<group>"; };
 		B517EBBA2BEB11E600C8A942 /* ChaeumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaeumUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B517EBCF2BEB21B800C8A942 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		B517EBD22BEB225F00C8A942 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B7EC13C9249D2AA86C812B65 /* Pods-ChaeumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChaeumTests.release.xcconfig"; path = "Target Support Files/Pods-ChaeumTests/Pods-ChaeumTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC14A0AE79D109CE92B180D7 /* Pods_Chaeum_ChaeumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chaeum_ChaeumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1143F6AE9C4AFA66985D792 /* Pods-Chaeum-ChaeumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chaeum-ChaeumUITests.release.xcconfig"; path = "Target Support Files/Pods-Chaeum-ChaeumUITests/Pods-Chaeum-ChaeumUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +136,43 @@
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
+		B500B9B52BF11A8E0045A2D5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B500B9B62BF11AAA0045A2D5 /* LoginViewControler.swift */,
+				B500B9BA2BF1D1AA0045A2D5 /* LoginViewModel.swift */,
+				B500B9B82BF1D15F0045A2D5 /* User.swift */,
+				B500B9BC2BF1D2EA0045A2D5 /* LoginReactor.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B500B9C32BF24FB20045A2D5 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B500B9C42BF24FBE0045A2D5 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B500B9CA2BF344850045A2D5 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				B500B9CD2BF344AA0045A2D5 /* NewsViewModel.swift */,
+				B500B9D42BF34A1E0045A2D5 /* NewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		B500B9CF2BF345A90045A2D5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B500B9D02BF345B60045A2D5 /* SettingViewController.swift */,
+				B500B9D22BF345C10045A2D5 /* SettingViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		B517EB882BEB11E500C8A942 = {
 			isa = PBXGroup;
 			children = (
@@ -141,14 +198,11 @@
 		B517EB932BEB11E500C8A942 /* Chaeum */ = {
 			isa = PBXGroup;
 			children = (
+				B517EBA52BEB11E600C8A942 /* Info.plist */,
+				B517EB962BEB11E500C8A942 /* SceneDelegate.swift */,
+				B517EB942BEB11E500C8A942 /* AppDelegate.swift */,
 				B517EBCD2BEB13AD00C8A942 /* Sources */,
 				B517EBCC2BEB135D00C8A942 /* Resources */,
-				B517EB942BEB11E500C8A942 /* AppDelegate.swift */,
-				B517EB962BEB11E500C8A942 /* SceneDelegate.swift */,
-				B517EBA02BEB11E600C8A942 /* Assets.xcassets */,
-				B517EBA22BEB11E600C8A942 /* LaunchScreen.storyboard */,
-				B517EBA52BEB11E600C8A942 /* Info.plist */,
-				B517EB9D2BEB11E500C8A942 /* Chaeum.xcdatamodeld */,
 			);
 			path = Chaeum;
 			sourceTree = "<group>";
@@ -173,6 +227,9 @@
 		B517EBCC2BEB135D00C8A942 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B517EB9D2BEB11E500C8A942 /* Chaeum.xcdatamodeld */,
+				B517EBA02BEB11E600C8A942 /* Assets.xcassets */,
+				B517EBA22BEB11E600C8A942 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -180,9 +237,13 @@
 		B517EBCD2BEB13AD00C8A942 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B500B9CF2BF345A90045A2D5 /* Settings */,
+				B500B9CA2BF344850045A2D5 /* News */,
+				B500B9C32BF24FB20045A2D5 /* Coordinator */,
+				B500B9B52BF11A8E0045A2D5 /* Login */,
 				B500B9B22BF0A6120045A2D5 /* Tabbar */,
-				B517EBD12BEB225200C8A942 /* Coordinator */,
 				B517EBCE2BEB21A600C8A942 /* Home */,
+				B500B9C62BF339080045A2D5 /* TestViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -191,16 +252,9 @@
 			isa = PBXGroup;
 			children = (
 				B517EBCF2BEB21B800C8A942 /* HomeViewController.swift */,
+				B500B9C82BF342610045A2D5 /* HomeViewModel.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		B517EBD12BEB225200C8A942 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				B517EBD22BEB225F00C8A942 /* Coordinator.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		CEE39EF868F3531CEA4B9DFE /* Pods */ = {
@@ -227,7 +281,7 @@
 				B517EB8D2BEB11E500C8A942 /* Sources */,
 				B517EB8E2BEB11E500C8A942 /* Frameworks */,
 				B517EB8F2BEB11E500C8A942 /* Resources */,
-				B0151466319DE423F0DBAFDC /* [CP] Embed Pods Frameworks */,
+				2773CC075C13CF8F0EE3004D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,7 +319,7 @@
 				B517EBB02BEB11E600C8A942 /* Sources */,
 				B517EBB12BEB11E600C8A942 /* Frameworks */,
 				B517EBB22BEB11E600C8A942 /* Resources */,
-				3C7DE66E815947614FD8602A /* [CP] Embed Pods Frameworks */,
+				3A1A86EBF41D2A48DF779E88 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -347,6 +401,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2773CC075C13CF8F0EE3004D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chaeum/Pods-Chaeum-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chaeum/Pods-Chaeum-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chaeum/Pods-Chaeum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		39D9B692966C667AE977963A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,7 +440,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3C7DE66E815947614FD8602A /* [CP] Embed Pods Frameworks */ = {
+		3A1A86EBF41D2A48DF779E88 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,23 +479,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B0151466319DE423F0DBAFDC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Chaeum/Pods-Chaeum-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Chaeum/Pods-Chaeum-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chaeum/Pods-Chaeum-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E78BAC3FB1CF123A320033C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -456,11 +510,21 @@
 			files = (
 				B517EBD02BEB21B800C8A942 /* HomeViewController.swift in Sources */,
 				B500B9B42BF0A67D0045A2D5 /* TabbarItem.swift in Sources */,
+				B500B9D12BF345B60045A2D5 /* SettingViewController.swift in Sources */,
 				B500B9B12BF0A40C0045A2D5 /* TabbarController.swift in Sources */,
-				B517EBD32BEB225F00C8A942 /* Coordinator.swift in Sources */,
 				B517EB952BEB11E500C8A942 /* AppDelegate.swift in Sources */,
+				B500B9D32BF345C10045A2D5 /* SettingViewModel.swift in Sources */,
+				B500B9B92BF1D15F0045A2D5 /* User.swift in Sources */,
+				B500B9BD2BF1D2EA0045A2D5 /* LoginReactor.swift in Sources */,
+				B500B9CE2BF344AA0045A2D5 /* NewsViewModel.swift in Sources */,
+				B500B9C52BF24FBE0045A2D5 /* Coordinator.swift in Sources */,
 				B517EB9F2BEB11E500C8A942 /* Chaeum.xcdatamodeld in Sources */,
+				B500B9C92BF342610045A2D5 /* HomeViewModel.swift in Sources */,
+				B500B9D52BF34A1E0045A2D5 /* NewsViewController.swift in Sources */,
 				B517EB972BEB11E500C8A942 /* SceneDelegate.swift in Sources */,
+				B500B9BB2BF1D1AA0045A2D5 /* LoginViewModel.swift in Sources */,
+				B500B9C72BF339080045A2D5 /* TestViewController.swift in Sources */,
+				B500B9B72BF11AAA0045A2D5 /* LoginViewControler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,7 +624,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -617,7 +681,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

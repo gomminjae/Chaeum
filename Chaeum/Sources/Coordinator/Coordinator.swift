@@ -2,11 +2,10 @@
 //  Coordinator.swift
 //  Chaeum
 //
-//  Created by 권민재 on 5/8/24.
+//  Created by 권민재 on 5/13/24.
 //
 
 import UIKit
-
 
 protocol Coordinator: AnyObject {
     var childCoordinators: [Coordinator] { get set }
@@ -29,7 +28,6 @@ class AppCoordinator: Coordinator {
     
     
     func start() {
-        
         let tabbarController = TabbarController()
         self.window?.rootViewController = tabbarController
     }
@@ -39,4 +37,3 @@ class AppCoordinator: Coordinator {
     }
     
 }
-

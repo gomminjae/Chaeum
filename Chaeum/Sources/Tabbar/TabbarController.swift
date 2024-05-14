@@ -14,6 +14,7 @@ class TabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTabbarController()
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +22,11 @@ class TabbarController: UITabBarController {
     
     private func setupTabbarController() {
         
+        let home = UINavigationController(rootViewController: HomeViewController())
+        home.title = "Home"
+        let test = TestViewController()
+        test.title = "title"
+        self.viewControllers = [home,test]
     }
 
 }

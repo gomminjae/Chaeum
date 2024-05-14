@@ -6,9 +6,9 @@ target 'Chaeum' do
   use_frameworks!
   pod 'RxSwift' 
   pod 'RxCocoa' 
-  pod 'ReactorKit' 
   pod 'SnapKit' 
-  
+  pod 'ReactorKit'
+  pod 'Alamofire'
 
   # Pods for Chaeum
 
