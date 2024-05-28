@@ -12,7 +12,6 @@
 		B500B9B12BF0A40C0045A2D5 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9B02BF0A40C0045A2D5 /* TabbarController.swift */; };
 		B500B9B42BF0A67D0045A2D5 /* TabbarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9B32BF0A67D0045A2D5 /* TabbarItem.swift */; };
 		B500B9B72BF11AAA0045A2D5 /* LoginViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9B62BF11AAA0045A2D5 /* LoginViewControler.swift */; };
-		B500B9B92BF1D15F0045A2D5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9B82BF1D15F0045A2D5 /* User.swift */; };
 		B500B9BB2BF1D1AA0045A2D5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9BA2BF1D1AA0045A2D5 /* LoginViewModel.swift */; };
 		B500B9C52BF24FBE0045A2D5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9C42BF24FBE0045A2D5 /* Coordinator.swift */; };
 		B500B9C92BF342610045A2D5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B500B9C82BF342610045A2D5 /* HomeViewModel.swift */; };
@@ -31,6 +30,13 @@
 		B524D4412C0585F200BCA70E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4402C0585F200BCA70E /* TestViewController.swift */; };
 		B524D4432C0586F000BCA70E /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4422C0586F000BCA70E /* HomeCoordinator.swift */; };
 		B524D4492C05897100BCA70E /* CHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4482C05897100BCA70E /* CHTextField.swift */; };
+		B524D44C2C05997D00BCA70E /* DesignSystemColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D44B2C05997D00BCA70E /* DesignSystemColor.swift */; };
+		B524D44E2C05999F00BCA70E /* DesignSystemFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D44D2C05999F00BCA70E /* DesignSystemFont.swift */; };
+		B524D4512C059A9900BCA70E /* DesignSystemIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4502C059A9900BCA70E /* DesignSystemIcon.swift */; };
+		B524D4532C05A6AC00BCA70E /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4522C05A6AC00BCA70E /* Schedule.swift */; };
+		B524D4552C05A6FE00BCA70E /* ScheduleUseCase .swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4542C05A6FE00BCA70E /* ScheduleUseCase .swift */; };
+		B524D4582C05A77200BCA70E /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4572C05A77200BCA70E /* ViewModelType.swift */; };
+		B524D45A2C060FC100BCA70E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4592C060FC100BCA70E /* BaseViewController.swift */; };
 		B69D910077B26DB43B401A0A /* Pods_ChaeumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4FE7C5CDA94BA33713AC656 /* Pods_ChaeumTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +67,6 @@
 		B500B9B02BF0A40C0045A2D5 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		B500B9B32BF0A67D0045A2D5 /* TabbarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarItem.swift; sourceTree = "<group>"; };
 		B500B9B62BF11AAA0045A2D5 /* LoginViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControler.swift; sourceTree = "<group>"; };
-		B500B9B82BF1D15F0045A2D5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B500B9BA2BF1D1AA0045A2D5 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B500B9C42BF24FBE0045A2D5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B500B9C82BF342610045A2D5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -84,6 +89,13 @@
 		B524D4402C0585F200BCA70E /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B524D4422C0586F000BCA70E /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		B524D4482C05897100BCA70E /* CHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHTextField.swift; sourceTree = "<group>"; };
+		B524D44B2C05997D00BCA70E /* DesignSystemColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemColor.swift; sourceTree = "<group>"; };
+		B524D44D2C05999F00BCA70E /* DesignSystemFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemFont.swift; sourceTree = "<group>"; };
+		B524D4502C059A9900BCA70E /* DesignSystemIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemIcon.swift; sourceTree = "<group>"; };
+		B524D4522C05A6AC00BCA70E /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		B524D4542C05A6FE00BCA70E /* ScheduleUseCase .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScheduleUseCase .swift"; sourceTree = "<group>"; };
+		B524D4572C05A77200BCA70E /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		B524D4592C060FC100BCA70E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B7EC13C9249D2AA86C812B65 /* Pods-ChaeumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChaeumTests.release.xcconfig"; path = "Target Support Files/Pods-ChaeumTests/Pods-ChaeumTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC14A0AE79D109CE92B180D7 /* Pods_Chaeum_ChaeumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chaeum_ChaeumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1143F6AE9C4AFA66985D792 /* Pods-Chaeum-ChaeumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chaeum-ChaeumUITests.release.xcconfig"; path = "Target Support Files/Pods-Chaeum-ChaeumUITests/Pods-Chaeum-ChaeumUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,10 +240,10 @@
 		B517EBCD2BEB13AD00C8A942 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B524D4562C05A76900BCA70E /* Common */,
 				B524D4442C0588F900BCA70E /* DesignSystem */,
 				B524D43F2C01B83100BCA70E /* Presentations */,
 				B524D43A2C01B7FC00BCA70E /* Domain */,
-				B524D4392C01B7E700BCA70E /* Data */,
 				B500B9C32BF24FB20045A2D5 /* Flows */,
 			);
 			path = Sources;
@@ -247,22 +259,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		B524D3F92BFDC02D00BCA70E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B500B9B82BF1D15F0045A2D5 /* User.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B524D4392C01B7E700BCA70E /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				B524D3F92BFDC02D00BCA70E /* Model */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		B524D43A2C01B7FC00BCA70E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +272,7 @@
 		B524D43B2C01B80100BCA70E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				B524D4522C05A6AC00BCA70E /* Schedule.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -283,6 +280,7 @@
 		B524D43C2C01B80900BCA70E /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				B524D4542C05A6FE00BCA70E /* ScheduleUseCase .swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -316,6 +314,8 @@
 		B524D4442C0588F900BCA70E /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				B524D44F2C059A8D00BCA70E /* Icon */,
+				B524D44A2C05996F00BCA70E /* Color */,
 				B524D4472C05894600BCA70E /* TextField */,
 				B524D4462C05893800BCA70E /* Navigation */,
 				B524D4452C05890600BCA70E /* Font */,
@@ -326,6 +326,7 @@
 		B524D4452C05890600BCA70E /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				B524D44D2C05999F00BCA70E /* DesignSystemFont.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -343,6 +344,31 @@
 				B524D4482C05897100BCA70E /* CHTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		B524D44A2C05996F00BCA70E /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				B524D44B2C05997D00BCA70E /* DesignSystemColor.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		B524D44F2C059A8D00BCA70E /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				B524D4502C059A9900BCA70E /* DesignSystemIcon.swift */,
+			);
+			path = Icon;
+			sourceTree = "<group>";
+		};
+		B524D4562C05A76900BCA70E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B524D4572C05A77200BCA70E /* ViewModelType.swift */,
+				B524D4592C060FC100BCA70E /* BaseViewController.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		CEE39EF868F3531CEA4B9DFE /* Pods */ = {
@@ -596,15 +622,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B524D4582C05A77200BCA70E /* ViewModelType.swift in Sources */,
 				B517EBD02BEB21B800C8A942 /* HomeViewController.swift in Sources */,
 				B500B9B42BF0A67D0045A2D5 /* TabbarItem.swift in Sources */,
+				B524D45A2C060FC100BCA70E /* BaseViewController.swift in Sources */,
 				B500B9D12BF345B60045A2D5 /* SettingViewController.swift in Sources */,
 				B500B9B12BF0A40C0045A2D5 /* TabbarController.swift in Sources */,
 				B517EB952BEB11E500C8A942 /* AppDelegate.swift in Sources */,
+				B524D4512C059A9900BCA70E /* DesignSystemIcon.swift in Sources */,
 				B524D4492C05897100BCA70E /* CHTextField.swift in Sources */,
+				B524D44C2C05997D00BCA70E /* DesignSystemColor.swift in Sources */,
 				B500B9D32BF345C10045A2D5 /* SettingViewModel.swift in Sources */,
 				B524D3F82BFDAEF600BCA70E /* LoginCoordinator.swift in Sources */,
-				B500B9B92BF1D15F0045A2D5 /* User.swift in Sources */,
+				B524D44E2C05999F00BCA70E /* DesignSystemFont.swift in Sources */,
 				B500B9C52BF24FBE0045A2D5 /* Coordinator.swift in Sources */,
 				B517EB9F2BEB11E500C8A942 /* Chaeum.xcdatamodeld in Sources */,
 				B524D4412C0585F200BCA70E /* TestViewController.swift in Sources */,
@@ -612,6 +642,8 @@
 				B517EB972BEB11E500C8A942 /* SceneDelegate.swift in Sources */,
 				B524D4432C0586F000BCA70E /* HomeCoordinator.swift in Sources */,
 				B500B9BB2BF1D1AA0045A2D5 /* LoginViewModel.swift in Sources */,
+				B524D4552C05A6FE00BCA70E /* ScheduleUseCase .swift in Sources */,
+				B524D4532C05A6AC00BCA70E /* Schedule.swift in Sources */,
 				B500B9B72BF11AAA0045A2D5 /* LoginViewControler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

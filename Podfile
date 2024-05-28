@@ -9,7 +9,7 @@ target 'Chaeum' do
   pod 'SnapKit' 
   pod 'Alamofire'
   pod 'Then'
-
+  pod 'lottie-ios'
   # Pods for Chaeum
 
   target 'ChaeumTests' do

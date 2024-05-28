@@ -9,8 +9,12 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
+import Then
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
+    
+    private let disposeBag = DisposeBag()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +23,25 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func setupViews() {
+        view.addSubview(collectionView)
+    }
     
+    override func setupConstraints() {
+        
+    }
     
-    
-    
+    override func bindRX() {
+        
+    }
+
     //MARK UI
+    lazy var collectionView = UICollectionView().then {
+        let layout = UICollectionViewLayout()
+        $0.collectionViewLayout = layout
+        $0.backgroundColor = .red
+    }
+    
     
 
 
