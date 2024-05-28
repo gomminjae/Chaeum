@@ -7,8 +7,8 @@ target 'Chaeum' do
   pod 'RxSwift' 
   pod 'RxCocoa' 
   pod 'SnapKit' 
-  pod 'ReactorKit'
   pod 'Alamofire'
+  pod 'Then'
 
   # Pods for Chaeum
 
