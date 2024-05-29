@@ -14,3 +14,8 @@ struct Schedule {
     let content: String
     let createData: Date
 }
+
+struct ScheduleList {
+    
+    let schedules: [Schedule]
+}

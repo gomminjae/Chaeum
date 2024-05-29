@@ -8,7 +8,13 @@
 import Foundation
 import RxSwift
 
-protocol ScheduleUseCase {
-    func schedules() -> Observable<[Schedule]>
-    func save(schedule: Schedule) -> Observable<Void>
+protocol ScheduleListUseCase {
+    func execute()
+}
+
+
+final class DefaultScheduleListUseCase: ScheduleListUseCase {
+    func execute() {
+        
+    }
 }

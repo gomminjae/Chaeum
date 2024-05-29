@@ -28,6 +28,11 @@ class HomeViewController: BaseViewController {
     }
     
     override func setupConstraints() {
+        collectionView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.leading.trailing.equalTo(view)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
         
     }
     
@@ -36,9 +41,7 @@ class HomeViewController: BaseViewController {
     }
 
     //MARK UI
-    lazy var collectionView = UICollectionView().then {
-        let layout = UICollectionViewLayout()
-        $0.collectionViewLayout = layout
+    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout()).then {
         $0.backgroundColor = .red
     }
     
