@@ -7,9 +7,6 @@
 
 import UIKit
 
-
-
-
 class TabbarController: UITabBarController {
 
     override func viewDidLoad() {
@@ -24,7 +21,7 @@ class TabbarController: UITabBarController {
         
         let home = UINavigationController(rootViewController: HomeViewController())
         home.title = "Home"
-        let test = TestViewController()
+        let test = BreathViewController()
         test.title = "title"
         self.viewControllers = [home,test]
     }

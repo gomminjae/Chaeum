@@ -8,10 +8,18 @@
 import Foundation
 
 
+enum Priority: Int {
+    case high
+    case medium
+    case low
+}
+
+
 struct Schedule {
     let uid: String
     let title: String
     let content: String
+    let priority: Priority
     let createData: Date
 }
 
