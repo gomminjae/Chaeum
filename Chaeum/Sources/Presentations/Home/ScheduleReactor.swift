@@ -8,7 +8,7 @@ import UIKit
 import ReactorKit
 import RxSwift
 
-class ScheduleListViewReactor: Reactor {
+class ScheduleReactor: Reactor {
     enum Action {
         case loadSchedules
         case addSchedule(Schedule)

@@ -21,7 +21,7 @@ class TabbarController: UITabBarController {
         
         let home = UINavigationController(rootViewController: HomeViewController())
         home.title = "Home"
-        let test = BreathViewController()
+        let test = TestViewController()
         test.title = "title"
         self.viewControllers = [home,test]
     }

@@ -21,6 +21,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        title = "Chaum"
 
         // Do any additional setup after loading the view.
     }
@@ -46,8 +47,5 @@ class HomeViewController: BaseViewController {
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout()).then {
         $0.backgroundColor = .white
     }
-    
-    
-
 
 }

@@ -16,4 +16,8 @@ protocol ScheduleRepository {
     func deleteSchedule(_ schedule: Schedule) -> Observable<Void>
 }
 
+class DefaultScheduleRepository {
+    
+}
+
 
