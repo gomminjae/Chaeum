@@ -8,13 +8,33 @@
 import Foundation
 import RxSwift
 
-protocol ScheduleListUseCase {
+protocol ScheduleListUseCaseable {
     func schedules() -> Observable<[Schedule]>
     func save(schedule: Schedule) -> Observable<Void>
+    func update(schedule: Schedule) -> Observable<Void>
     func delete(schedule: Schedule) -> Observable<Void>
 }
 
 
-final class DefaultScheduleListUseCase {
-   
+class ScheduleListUseCase: ScheduleListUseCaseable {
+    
+    private let repository: ScheduleRepository
+    
+    init(repository: ScheduleRepository) {
+        self.repository = repository
+    }
+    
+    func schedules() -> Observable<[Schedule]> {
+        return repository.fetchScheduleList()
+    }
+    
+    func save(schedule: Schedule) -> Observable<Void> {
+        return repository.saveSchedule(schedule)
+    }
+    func update(schedule: Schedule) -> Observable<Void> {
+        return repository.updateSchedule(schedule)
+    }
+    func delete(schedule: Schedule) -> Observable<Void> {
+        return repository.deleteSchedule(schedule)
+    }
 }

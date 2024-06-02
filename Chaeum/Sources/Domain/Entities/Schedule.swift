@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import RealmSwift
 
 enum Priority: Int {
     case high
@@ -20,8 +20,10 @@ struct Schedule {
     let title: String
     let content: String
     let priority: Priority
-    let createData: Date
+    let createDate: Date
 }
+
+
 
 struct ScheduleList {
     

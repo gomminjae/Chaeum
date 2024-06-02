@@ -11,21 +11,7 @@ import RxSwift
 import RxCocoa
 import Then
 
-extension UIView {
-    func addBlurEffect(style: UIBlurEffect.Style, alpha: CGFloat = 1.0) {
-        if !UIAccessibility.isReduceTransparencyEnabled {
-            backgroundColor = .clear
-            let blurEffect = UIBlurEffect(style: style)
-            let blurEffectView = UIVisualEffectView(effect: blurEffect)
-            blurEffectView.frame = self.bounds
-            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            blurEffectView.alpha = alpha
-            addSubview(blurEffectView)
-        } else {
-            backgroundColor = .black
-        }
-    }
-}
+
 
 class HomeViewController: BaseViewController {
     
@@ -58,7 +44,7 @@ class HomeViewController: BaseViewController {
 
     //MARK UI
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout()).then {
-        $0.addBlurEffect(style: .dark,alpha: 0.7)
+        $0.backgroundColor = .white
     }
     
     
