@@ -1,6 +1,14 @@
 PODS:
   - Alamofire (5.9.1)
   - lottie-ios (4.4.3)
+  - ReactorKit (3.2.0):
+    - RxSwift (~> 6.0)
+    - WeakMapTable (~> 1.1)
+  - Realm (10.50.1):
+    - Realm/Headers (= 10.50.1)
+  - Realm/Headers (10.50.1)
+  - RealmSwift (10.50.1):
+    - Realm (= 10.50.1)
   - RxCocoa (6.7.1):
     - RxRelay (= 6.7.1)
     - RxSwift (= 6.7.1)
@@ -9,10 +17,13 @@ PODS:
   - RxSwift (6.7.1)
   - SnapKit (5.7.1)
   - Then (3.0.0)
+  - WeakMapTable (1.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - lottie-ios
+  - ReactorKit
+  - RealmSwift
   - RxCocoa
   - RxSwift
   - SnapKit
@@ -22,21 +33,29 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - lottie-ios
+    - ReactorKit
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxRelay
     - RxSwift
     - SnapKit
     - Then
+    - WeakMapTable
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   lottie-ios: fcb5e73e17ba4c983140b7d21095c834b3087418
+  ReactorKit: e8b11d6b9c415405f381669b095c154a05b59eca
+  Realm: 36bc9fe2681d7cf234aa487e7990821c772206a2
+  RealmSwift: 84a370d3d4f191d327a9f8ade1f064a274f79847
   RxCocoa: f5609cb4637587a7faa99c5d5787e3ad582b75a4
   RxRelay: 4151ba01152436b08271e08410135e099880eae5
   RxSwift: b9a93a26031785159e11abd40d1a55bcb8057e52
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
+  WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: 9ed614703ca9656b4e78df30484e16c6a9814774
+PODFILE CHECKSUM: 019be45a074b6c3e492d54dbd969b0c712c1dcff
 
 COCOAPODS: 1.15.2

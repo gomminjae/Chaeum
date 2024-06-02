@@ -41,6 +41,8 @@
 		B524D4622C09A9F200BCA70E /* CacheStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4612C09A9F200BCA70E /* CacheStorage.swift */; };
 		B524D4782C0B586000BCA70E /* BreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4772C0B586000BCA70E /* BreathViewController.swift */; };
 		B54EAD542C0B66AB00618512 /* Pods_Chaeum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9D34D562D92B2E98A09B1F /* Pods_Chaeum.framework */; };
+		B581F5142C0C30BD00A38D8C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5132C0C30BD00A38D8C /* Theme.swift */; };
+		B581F5162C0C312600A38D8C /* ComponentAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5152C0C312600A38D8C /* ComponentAsset.swift */; };
 		B7DEE849A8285F47AFFD23BF /* Pods_Chaeum_ChaeumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +107,8 @@
 		B524D45F2C09A9CF00BCA70E /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		B524D4612C09A9F200BCA70E /* CacheStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStorage.swift; sourceTree = "<group>"; };
 		B524D4772C0B586000BCA70E /* BreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathViewController.swift; sourceTree = "<group>"; };
+		B581F5132C0C30BD00A38D8C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B581F5152C0C312600A38D8C /* ComponentAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentAsset.swift; sourceTree = "<group>"; };
 		C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chaeum_ChaeumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAF5BAEA8927A43B2BB858D /* Pods-ChaeumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChaeumTests.debug.xcconfig"; path = "Target Support Files/Pods-ChaeumTests/Pods-ChaeumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -313,6 +317,7 @@
 		B524D4442C0588F900BCA70E /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				B581F5122C0C30B300A38D8C /* Theme */,
 				B524D44F2C059A8D00BCA70E /* Icon */,
 				B524D44A2C05996F00BCA70E /* Color */,
 				B524D4472C05894600BCA70E /* TextField */,
@@ -395,6 +400,15 @@
 				B524D4772C0B586000BCA70E /* BreathViewController.swift */,
 			);
 			path = Breath;
+			sourceTree = "<group>";
+		};
+		B581F5122C0C30B300A38D8C /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				B581F5132C0C30BD00A38D8C /* Theme.swift */,
+				B581F5152C0C312600A38D8C /* ComponentAsset.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		C5EAAB83B87627A33A3267C3 /* Frameworks */ = {
@@ -513,6 +527,8 @@
 				Base,
 			);
 			mainGroup = B517EB882BEB11E500C8A942;
+			packageReferences = (
+			);
 			productRefGroup = B517EB922BEB11E500C8A942 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -658,6 +674,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B581F5162C0C312600A38D8C /* ComponentAsset.swift in Sources */,
 				B524D4582C05A77200BCA70E /* ViewModelType.swift in Sources */,
 				B517EBD02BEB21B800C8A942 /* HomeViewController.swift in Sources */,
 				B500B9B42BF0A67D0045A2D5 /* TabbarItem.swift in Sources */,
@@ -671,6 +688,7 @@
 				B524D4602C09A9CF00BCA70E /* Storage.swift in Sources */,
 				B524D44C2C05997D00BCA70E /* DesignSystemColor.swift in Sources */,
 				B500B9D32BF345C10045A2D5 /* SettingViewModel.swift in Sources */,
+				B581F5142C0C30BD00A38D8C /* Theme.swift in Sources */,
 				B524D3F82BFDAEF600BCA70E /* LoginCoordinator.swift in Sources */,
 				B524D44E2C05999F00BCA70E /* DesignSystemFont.swift in Sources */,
 				B500B9C52BF24FBE0045A2D5 /* Coordinator.swift in Sources */,

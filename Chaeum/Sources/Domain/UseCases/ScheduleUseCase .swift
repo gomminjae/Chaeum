@@ -9,12 +9,12 @@ import Foundation
 import RxSwift
 
 protocol ScheduleListUseCase {
-    func execute()
+    func schedules() -> Observable<[Schedule]>
+    func save(schedule: Schedule) -> Observable<Void>
+    func delete(schedule: Schedule) -> Observable<Void>
 }
 
 
-final class DefaultScheduleListUseCase: ScheduleListUseCase {
-    func execute() {
-        
-    }
+final class DefaultScheduleListUseCase {
+   
 }
