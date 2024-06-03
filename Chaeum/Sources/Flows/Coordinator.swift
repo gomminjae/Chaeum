@@ -16,11 +16,8 @@ protocol Coordinator: AnyObject {
 
 class AppCoordinator: Coordinator {
     var parentCoordinator: (any Coordinator)?
-    var children: [any Coordinator] = []
-    //var navigationController: UINavigationController
-
-    let window: UIWindow?
-    
+    var window: UIWindow?
+    var children: [Coordinator] = []
     
     init(_ window: UIWindow?) {
         self.window = window
@@ -28,12 +25,12 @@ class AppCoordinator: Coordinator {
         start()
     }
     
-    deinit {
-        print("App Coordinator deinit")
-    }
-    
     func start() {
-        let tabbarController = TabbarController()
-        self.window?.rootViewController = tabbarController
+        let homeNavigationController = UINavigationController()
+        let homeCoordinator = HomeCoordinator(navigationController: homeNavigationController)
+        
+        let tabBarController = TabBarController(homeCoordinator: homeCoordinator)
+        
+        window?.rootViewController = tabBarController
     }
 }

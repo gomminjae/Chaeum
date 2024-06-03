@@ -34,6 +34,13 @@ class ScheduleReactor: Reactor {
         self.useCase = useCase
     }
 
+}
+
+
+
+//MARK: Mutation
+extension ScheduleReactor {
+    
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .loadSchedules:
@@ -46,7 +53,12 @@ class ScheduleReactor: Reactor {
             return useCase.delete(schedule: schedule).map { Mutation.deleteSchedule(schedule) }
         }
     }
+    
+}
 
+//MARK: Reduce
+extension ScheduleReactor {
+    
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         switch mutation {
@@ -64,3 +76,4 @@ class ScheduleReactor: Reactor {
         return newState
     }
 }
+

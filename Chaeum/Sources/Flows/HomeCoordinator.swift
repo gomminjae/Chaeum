@@ -13,15 +13,16 @@ class HomeCoordinator: Coordinator {
     var parentCoordinator: Coordinator?
     var children: [Coordinator] = []
     
-    private let navigationController: UINavigationController
-    
-    
+    let navigationController: UINavigationController
+
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
+
     func start() {
-        let homeVC = HomeViewController()
-        navigationController.pushViewController(homeVC, animated: true)
+        let reactor = DependencyContainer.shared.homeReactor
+        let homeVC = HomeViewController(reactor: reactor)
+        homeVC.title = "Chaeum"
+        navigationController.pushViewController(homeVC, animated: false)
     }
 }

@@ -45,6 +45,7 @@
 		B581F5162C0C312600A38D8C /* ComponentAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5152C0C312600A38D8C /* ComponentAsset.swift */; };
 		B581F5192C0C4C9D00A38D8C /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5182C0C4C9D00A38D8C /* ScheduleRepository.swift */; };
 		B581F51B2C0CBE0000A38D8C /* HomeReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F51A2C0CBE0000A38D8C /* HomeReactor.swift */; };
+		B581F51F2C0D514700A38D8C /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F51E2C0D514700A38D8C /* DependencyContainer.swift */; };
 		B7DEE849A8285F47AFFD23BF /* Pods_Chaeum_ChaeumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		B581F5152C0C312600A38D8C /* ComponentAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentAsset.swift; sourceTree = "<group>"; };
 		B581F5182C0C4C9D00A38D8C /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
 		B581F51A2C0CBE0000A38D8C /* HomeReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReactor.swift; sourceTree = "<group>"; };
+		B581F51E2C0D514700A38D8C /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chaeum_ChaeumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAF5BAEA8927A43B2BB858D /* Pods-ChaeumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChaeumTests.debug.xcconfig"; path = "Target Support Files/Pods-ChaeumTests/Pods-ChaeumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,6 +248,7 @@
 		B517EBCD2BEB13AD00C8A942 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				B581F51D2C0D513700A38D8C /* DI */,
 				B524D45B2C09A91800BCA70E /* Data */,
 				B524D4562C05A76900BCA70E /* Common */,
 				B524D4442C0588F900BCA70E /* DesignSystem */,
@@ -259,10 +262,9 @@
 		B517EBCE2BEB21A600C8A942 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B581F51C2C0CC49900A38D8C /* Reactor */,
 				B517EBCF2BEB21B800C8A942 /* HomeViewController.swift */,
-				B500B9C82BF342610045A2D5 /* ScheduleReactor.swift */,
 				B524D4402C0585F200BCA70E /* TestViewController.swift */,
-				B581F51A2C0CBE0000A38D8C /* HomeReactor.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -415,6 +417,24 @@
 				B581F5152C0C312600A38D8C /* ComponentAsset.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		B581F51C2C0CC49900A38D8C /* Reactor */ = {
+			isa = PBXGroup;
+			children = (
+				B581F51A2C0CBE0000A38D8C /* HomeReactor.swift */,
+				B500B9C82BF342610045A2D5 /* ScheduleReactor.swift */,
+			);
+			path = Reactor;
+			sourceTree = "<group>";
+		};
+		B581F51D2C0D513700A38D8C /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				B581F51E2C0D514700A38D8C /* DependencyContainer.swift */,
+			);
+			name = DI;
+			path = "야";
 			sourceTree = "<group>";
 		};
 		C5EAAB83B87627A33A3267C3 /* Frameworks */ = {
@@ -702,6 +722,7 @@
 				B517EB9F2BEB11E500C8A942 /* Chaeum.xcdatamodeld in Sources */,
 				B524D4412C0585F200BCA70E /* TestViewController.swift in Sources */,
 				B500B9C92BF342610045A2D5 /* ScheduleReactor.swift in Sources */,
+				B581F51F2C0D514700A38D8C /* DependencyContainer.swift in Sources */,
 				B517EB972BEB11E500C8A942 /* SceneDelegate.swift in Sources */,
 				B581F51B2C0CBE0000A38D8C /* HomeReactor.swift in Sources */,
 				B524D4432C0586F000BCA70E /* HomeCoordinator.swift in Sources */,

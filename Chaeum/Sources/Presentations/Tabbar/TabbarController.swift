@@ -7,23 +7,34 @@
 
 import UIKit
 
-class TabbarController: UITabBarController {
+class TabBarController: UITabBarController {
+
+    private let homeCoordinator: HomeCoordinator
+
+    init(homeCoordinator: HomeCoordinator) {
+        self.homeCoordinator = homeCoordinator
+        super.init(nibName: nil, bundle: nil)
+        setupTabbarController()
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTabbarController()
-
         // Do any additional setup after loading the view.
     }
-    
-    
-    private func setupTabbarController() {
-        
-        let home = UINavigationController(rootViewController: HomeViewController())
-        home.title = "Home"
-        let test = TestViewController()
-        test.title = "title"
-        self.viewControllers = [home,test]
-    }
 
+    private func setupTabbarController() {
+        homeCoordinator.start()
+        
+        let homeNavigationController = homeCoordinator.navigationController
+        homeNavigationController.title = "Home"
+
+        let testViewController = TestViewController()
+        testViewController.title = "Test"
+
+        self.viewControllers = [homeNavigationController, testViewController]
+    }
 }
