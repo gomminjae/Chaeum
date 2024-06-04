@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.9.1)
+  - FSCalendar (2.8.4)
   - lottie-ios (4.4.3)
   - ReactorKit (3.2.0):
     - RxSwift (~> 6.0)
@@ -21,6 +22,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - FSCalendar
   - lottie-ios
   - ReactorKit
   - RealmSwift
@@ -32,6 +34,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - FSCalendar
     - lottie-ios
     - ReactorKit
     - Realm
@@ -45,6 +48,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   lottie-ios: fcb5e73e17ba4c983140b7d21095c834b3087418
   ReactorKit: e8b11d6b9c415405f381669b095c154a05b59eca
   Realm: 36bc9fe2681d7cf234aa487e7990821c772206a2
@@ -56,6 +60,6 @@ SPEC CHECKSUMS:
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: 019be45a074b6c3e492d54dbd969b0c712c1dcff
+PODFILE CHECKSUM: adac98abb5141f593f6f9832becddf40c8ae9d80
 
 COCOAPODS: 1.15.2

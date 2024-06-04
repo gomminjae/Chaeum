@@ -36,8 +36,6 @@ class ScheduleReactor: Reactor {
 
 }
 
-
-
 //MARK: Mutation
 extension ScheduleReactor {
     

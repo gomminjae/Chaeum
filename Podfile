@@ -12,6 +12,7 @@ target 'Chaeum' do
   pod 'lottie-ios'
   pod 'RealmSwift'
   pod 'ReactorKit'
+  pod 'FSCalendar'
   # Pods for Chaeum
 
   target 'ChaeumTests' do
