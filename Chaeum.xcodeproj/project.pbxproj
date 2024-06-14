@@ -52,7 +52,6 @@
 		B581F5442C0ED55800A38D8C /* NickNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5432C0ED55800A38D8C /* NickNameView.swift */; };
 		B581F5462C0ED56800A38D8C /* JobCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5452C0ED56800A38D8C /* JobCategoryView.swift */; };
 		B581F5482C0ED57700A38D8C /* WorryCategoryView .swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5472C0ED57700A38D8C /* WorryCategoryView .swift */; };
-		B581F54A2C0ED58000A38D8C /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5492C0ED58000A38D8C /* CompleteView.swift */; };
 		B581F54C2C1B258D00A38D8C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F54B2C1B258D00A38D8C /* User.swift */; };
 		B581F54E2C1BDCEC00A38D8C /* OnboardingUseCase .swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */; };
 		B581F5512C1BDD2200A38D8C /* OnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */; };
@@ -132,7 +131,6 @@
 		B581F5432C0ED55800A38D8C /* NickNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameView.swift; sourceTree = "<group>"; };
 		B581F5452C0ED56800A38D8C /* JobCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryView.swift; sourceTree = "<group>"; };
 		B581F5472C0ED57700A38D8C /* WorryCategoryView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorryCategoryView .swift"; sourceTree = "<group>"; };
-		B581F5492C0ED58000A38D8C /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
 		B581F54B2C1B258D00A38D8C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingUseCase .swift"; sourceTree = "<group>"; };
 		B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepository.swift; sourceTree = "<group>"; };
@@ -356,7 +354,6 @@
 				B581F5122C0C30B300A38D8C /* Theme */,
 				B524D44F2C059A8D00BCA70E /* Icon */,
 				B524D44A2C05996F00BCA70E /* Color */,
-				B524D4472C05894600BCA70E /* TextField */,
 				B524D4462C05893800BCA70E /* Navigation */,
 				B524D4452C05890600BCA70E /* Font */,
 			);
@@ -376,14 +373,6 @@
 			children = (
 			);
 			path = Navigation;
-			sourceTree = "<group>";
-		};
-		B524D4472C05894600BCA70E /* TextField */ = {
-			isa = PBXGroup;
-			children = (
-				B524D4482C05897100BCA70E /* CHTextField.swift */,
-			);
-			path = TextField;
 			sourceTree = "<group>";
 		};
 		B524D44A2C05996F00BCA70E /* Color */ = {
@@ -476,6 +465,7 @@
 		B581F53D2C0EBA3D00A38D8C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B524D4482C05897100BCA70E /* CHTextField.swift */,
 				B581F5532C1C823700A38D8C /* SegmentedProgressBar.swift */,
 			);
 			path = Components;
@@ -489,7 +479,6 @@
 				B581F5432C0ED55800A38D8C /* NickNameView.swift */,
 				B581F5452C0ED56800A38D8C /* JobCategoryView.swift */,
 				B581F5472C0ED57700A38D8C /* WorryCategoryView .swift */,
-				B581F5492C0ED58000A38D8C /* CompleteView.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -770,7 +759,6 @@
 				B517EB952BEB11E500C8A942 /* AppDelegate.swift in Sources */,
 				B524D4512C059A9900BCA70E /* DesignSystemIcon.swift in Sources */,
 				B524D4782C0B586000BCA70E /* BreathViewController.swift in Sources */,
-				B581F54A2C0ED58000A38D8C /* CompleteView.swift in Sources */,
 				B581F5512C1BDD2200A38D8C /* OnboardingRepository.swift in Sources */,
 				B524D4492C05897100BCA70E /* CHTextField.swift in Sources */,
 				B581F5462C0ED56800A38D8C /* JobCategoryView.swift in Sources */,

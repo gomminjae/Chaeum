@@ -16,12 +16,17 @@ import RxCocoa
 class CHTextField: UITextField {
     
     
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(placeHolder: String) {
+        super.init(frame: .zero)
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupTextField(_ placeHolder: String) {
+        textColor = .white
+        
     }
 }

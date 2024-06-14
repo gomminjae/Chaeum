@@ -28,6 +28,10 @@ class JobCategoryView: UIView {
     
     
     //MARK: UI
+    
+    
+    
+    
     lazy var titleLabel = UILabel().then {
         $0.text = "정보를 입력할게요"
         $0.textColor = .white

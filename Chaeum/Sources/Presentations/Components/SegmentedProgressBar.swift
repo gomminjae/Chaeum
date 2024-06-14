@@ -8,7 +8,7 @@ import UIKit
 
 class SegmentedProgressBar: UIView {
     
-    var segmentCount: Int = 6
+    var segmentCount: Int = 4
     var progress: CGFloat = 0.0 {
         didSet {
             setNeedsLayout()

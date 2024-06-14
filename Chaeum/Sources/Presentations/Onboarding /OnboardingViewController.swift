@@ -16,7 +16,7 @@ import Then
 
 class OnboardingViewController: BaseViewController, UITextFieldDelegate {
     
-    var appCoordinator: AppCoordinator?
+    private var appCoordinator: AppCoordinator?
     private let disposeBag = DisposeBag()
     private let currentPage = BehaviorRelay<Int>(value: 0)
     
@@ -93,6 +93,20 @@ let segmentedProgressBar = SegmentedProgressBar()
                     self.prevButton.isHidden = page <= 0 || page >= lastPage
                     self.startButton.isHidden = page != lastPage
                 }
+            })
+            .disposed(by: disposeBag)
+//        currentPage
+//            .map { CGFloat($0) / CGFloat(self.segmentedProgressBar.segmentCount)}
+//            .bind(to: Binder(self) { (vc,progress) in
+//                vc.segmentedProgressBar.progress = progress
+//            })
+//            .disposed(by: disposeBag)
+        
+        currentPage
+            .map { CGFloat($0) / CGFloat(self.segmentedProgressBar.segmentCount)}
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] progress in
+                self?.segmentedProgressBar.progress = progress
             })
             .disposed(by: disposeBag)
         
