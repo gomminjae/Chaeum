@@ -8,10 +8,18 @@
 import Foundation
 
 struct User {
-    let name: String
-    let goal: String
-    let bithday: Date
-    let jobCategory: String
+    @UserDefault(key: "name", defaultValue: "")
+    var name: String
+
+    @UserDefault(key: "nickname", defaultValue: "")
+    var nickname: String
+
+    @UserDefault(key: "birthdate", defaultValue: Date())
+    var birthdate: Date
+
+    @UserDefault(key: "jobCategory", defaultValue: "")
+    var jobCategory: String
+    
+    @UserDefault(key: "goal", defaultValue: "")
+    var goal: String
 }
-
-

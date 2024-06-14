@@ -11,22 +11,19 @@ import UIKit
 @propertyWrapper
 struct UserDefault<T> {
     private let key: String
-    private let value: T
-    
-    init(key: String, value: T) {
+    private let defaultValue: T
+
+    init(key: String, defaultValue: T) {
         self.key = key
-        self.value = value
+        self.defaultValue = defaultValue
     }
-    
+
     var wrappedValue: T {
         get {
-            return UserDefaults.standard.object(forKey: key) as? T ?? value
+            return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
         }
-        
         set {
             UserDefaults.standard.setValue(newValue, forKey: key)
         }
     }
-    
-    
 }
