@@ -28,9 +28,9 @@ class ScheduleReactor: Reactor {
     }
 
     let initialState = State()
-    private let useCase: ScheduleListUseCaseable
+    private let useCase: ScheduleListUseCase
 
-    init(useCase: ScheduleListUseCaseable) {
+    init(useCase: ScheduleListUseCaseImpl) {
         self.useCase = useCase
     }
 

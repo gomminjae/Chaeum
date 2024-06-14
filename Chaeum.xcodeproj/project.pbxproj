@@ -36,9 +36,7 @@
 		B524D4552C05A6FE00BCA70E /* ScheduleUseCase .swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4542C05A6FE00BCA70E /* ScheduleUseCase .swift */; };
 		B524D4582C05A77200BCA70E /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4572C05A77200BCA70E /* ViewModelType.swift */; };
 		B524D45A2C060FC100BCA70E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4592C060FC100BCA70E /* BaseViewController.swift */; };
-		B524D45E2C09A92F00BCA70E /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D45D2C09A92F00BCA70E /* AppSettings.swift */; };
-		B524D4602C09A9CF00BCA70E /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D45F2C09A9CF00BCA70E /* Storage.swift */; };
-		B524D4622C09A9F200BCA70E /* CacheStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4612C09A9F200BCA70E /* CacheStorage.swift */; };
+		B524D45E2C09A92F00BCA70E /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D45D2C09A92F00BCA70E /* UserDefault.swift */; };
 		B524D4782C0B586000BCA70E /* BreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4772C0B586000BCA70E /* BreathViewController.swift */; };
 		B54EAD542C0B66AB00618512 /* Pods_Chaeum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9D34D562D92B2E98A09B1F /* Pods_Chaeum.framework */; };
 		B581F5142C0C30BD00A38D8C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5132C0C30BD00A38D8C /* Theme.swift */; };
@@ -55,6 +53,9 @@
 		B581F5462C0ED56800A38D8C /* JobCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5452C0ED56800A38D8C /* JobCategoryView.swift */; };
 		B581F5482C0ED57700A38D8C /* WorryCategoryView .swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5472C0ED57700A38D8C /* WorryCategoryView .swift */; };
 		B581F54A2C0ED58000A38D8C /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5492C0ED58000A38D8C /* CompleteView.swift */; };
+		B581F54C2C1B258D00A38D8C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F54B2C1B258D00A38D8C /* User.swift */; };
+		B581F54E2C1BDCEC00A38D8C /* OnboardingUseCase .swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */; };
+		B581F5512C1BDD2200A38D8C /* OnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */; };
 		B7DEE849A8285F47AFFD23BF /* Pods_Chaeum_ChaeumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,9 +116,7 @@
 		B524D4542C05A6FE00BCA70E /* ScheduleUseCase .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScheduleUseCase .swift"; sourceTree = "<group>"; };
 		B524D4572C05A77200BCA70E /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		B524D4592C060FC100BCA70E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		B524D45D2C09A92F00BCA70E /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
-		B524D45F2C09A9CF00BCA70E /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
-		B524D4612C09A9F200BCA70E /* CacheStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheStorage.swift; sourceTree = "<group>"; };
+		B524D45D2C09A92F00BCA70E /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		B524D4772C0B586000BCA70E /* BreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathViewController.swift; sourceTree = "<group>"; };
 		B581F5132C0C30BD00A38D8C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B581F5152C0C312600A38D8C /* ComponentAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentAsset.swift; sourceTree = "<group>"; };
@@ -133,6 +132,9 @@
 		B581F5452C0ED56800A38D8C /* JobCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryView.swift; sourceTree = "<group>"; };
 		B581F5472C0ED57700A38D8C /* WorryCategoryView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorryCategoryView .swift"; sourceTree = "<group>"; };
 		B581F5492C0ED58000A38D8C /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
+		B581F54B2C1B258D00A38D8C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingUseCase .swift"; sourceTree = "<group>"; };
+		B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepository.swift; sourceTree = "<group>"; };
 		C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chaeum_ChaeumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAF5BAEA8927A43B2BB858D /* Pods-ChaeumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChaeumTests.debug.xcconfig"; path = "Target Support Files/Pods-ChaeumTests/Pods-ChaeumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -301,6 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				B524D4522C05A6AC00BCA70E /* Schedule.swift */,
+				B581F54B2C1B258D00A38D8C /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				B524D4542C05A6FE00BCA70E /* ScheduleUseCase .swift */,
+				B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -325,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				B581F5182C0C4C9D00A38D8C /* ScheduleRepository.swift */,
+				B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -416,9 +421,7 @@
 		B524D45C2C09A91F00BCA70E /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				B524D45D2C09A92F00BCA70E /* AppSettings.swift */,
-				B524D45F2C09A9CF00BCA70E /* Storage.swift */,
-				B524D4612C09A9F200BCA70E /* CacheStorage.swift */,
+				B524D45D2C09A92F00BCA70E /* UserDefault.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				B581F5402C0EBF4300A38D8C /* HeaderView .swift in Sources */,
 				B581F5162C0C312600A38D8C /* ComponentAsset.swift in Sources */,
 				B524D4582C05A77200BCA70E /* ViewModelType.swift in Sources */,
+				B581F54E2C1BDCEC00A38D8C /* OnboardingUseCase .swift in Sources */,
 				B517EBD02BEB21B800C8A942 /* HomeViewController.swift in Sources */,
 				B500B9B42BF0A67D0045A2D5 /* TabbarItem.swift in Sources */,
 				B524D45A2C060FC100BCA70E /* BaseViewController.swift in Sources */,
@@ -764,8 +768,8 @@
 				B524D4512C059A9900BCA70E /* DesignSystemIcon.swift in Sources */,
 				B524D4782C0B586000BCA70E /* BreathViewController.swift in Sources */,
 				B581F54A2C0ED58000A38D8C /* CompleteView.swift in Sources */,
+				B581F5512C1BDD2200A38D8C /* OnboardingRepository.swift in Sources */,
 				B524D4492C05897100BCA70E /* CHTextField.swift in Sources */,
-				B524D4602C09A9CF00BCA70E /* Storage.swift in Sources */,
 				B581F5462C0ED56800A38D8C /* JobCategoryView.swift in Sources */,
 				B581F5482C0ED57700A38D8C /* WorryCategoryView .swift in Sources */,
 				B524D44C2C05997D00BCA70E /* DesignSystemColor.swift in Sources */,
@@ -774,19 +778,19 @@
 				B524D3F82BFDAEF600BCA70E /* LoginCoordinator.swift in Sources */,
 				B524D44E2C05999F00BCA70E /* DesignSystemFont.swift in Sources */,
 				B500B9C52BF24FBE0045A2D5 /* Coordinator.swift in Sources */,
-				B524D45E2C09A92F00BCA70E /* AppSettings.swift in Sources */,
+				B524D45E2C09A92F00BCA70E /* UserDefault.swift in Sources */,
 				B517EB9F2BEB11E500C8A942 /* Chaeum.xcdatamodeld in Sources */,
 				B524D4412C0585F200BCA70E /* TestViewController.swift in Sources */,
 				B500B9C92BF342610045A2D5 /* ScheduleReactor.swift in Sources */,
 				B581F51F2C0D514700A38D8C /* DependencyContainer.swift in Sources */,
 				B581F5242C0D76F600A38D8C /* OnboardingReactor.swift in Sources */,
+				B581F54C2C1B258D00A38D8C /* User.swift in Sources */,
 				B581F5262C0D770700A38D8C /* OnboardingCoordinator.swift in Sources */,
 				B517EB972BEB11E500C8A942 /* SceneDelegate.swift in Sources */,
 				B581F51B2C0CBE0000A38D8C /* HomeReactor.swift in Sources */,
 				B524D4432C0586F000BCA70E /* HomeCoordinator.swift in Sources */,
 				B581F5192C0C4C9D00A38D8C /* ScheduleRepository.swift in Sources */,
 				B500B9BB2BF1D1AA0045A2D5 /* LoginReactor.swift in Sources */,
-				B524D4622C09A9F200BCA70E /* CacheStorage.swift in Sources */,
 				B524D4552C05A6FE00BCA70E /* ScheduleUseCase .swift in Sources */,
 				B524D4532C05A6AC00BCA70E /* Schedule.swift in Sources */,
 				B581F5222C0D76E300A38D8C /* OnboardingViewController.swift in Sources */,

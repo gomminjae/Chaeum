@@ -17,8 +17,8 @@ class DependencyContainer {
         return DefaultScheduleRepository()
     }()
     
-    lazy var scheduleUseCase: ScheduleListUseCaseable = {
-        return ScheduleListUseCase(repository: scheduleRepository)
+    lazy var scheduleUseCase: ScheduleListUseCaseImpl = {
+        return ScheduleListUseCaseImpl(repository: scheduleRepository)
     }()
     
     lazy var scheduleReactor: ScheduleReactor = {

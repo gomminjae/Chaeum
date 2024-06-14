@@ -15,6 +15,7 @@ class WorryCategoryView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .systemMint
+        
     }
     
     required init?(coder: NSCoder) {

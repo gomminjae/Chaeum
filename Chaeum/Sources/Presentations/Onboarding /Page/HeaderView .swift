@@ -7,6 +7,7 @@
 import UIKit
 import SnapKit
 import Then
+import Lottie
 
 
 class HeaderView: UIView {
@@ -16,8 +17,13 @@ class HeaderView: UIView {
         super.init(frame: frame)
         self.backgroundColor = .orange
         
-        self.snp.makeConstraints {
-            $0.height.equalTo(800)
+        
+        
+        addSubview(titleLabel)
+        
+        titleLabel.snp.makeConstraints {
+            $0.centerX.equalTo(self)
+            $0.top.equalTo(self).inset(40)
         }
     }
     
@@ -37,5 +43,6 @@ class HeaderView: UIView {
     }
     lazy var headerImage = UIImageView()
 }
+
 
 

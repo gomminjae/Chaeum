@@ -15,9 +15,7 @@ class NameView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .blue
-        self.snp.makeConstraints {
-            $0.height.equalTo(800)
-        }
+        
     }
     
     required init?(coder: NSCoder) {

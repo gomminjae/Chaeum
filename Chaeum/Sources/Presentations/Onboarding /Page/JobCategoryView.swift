@@ -15,6 +15,7 @@ class JobCategoryView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .systemPink
+        
     }
     
     required init?(coder: NSCoder) {
