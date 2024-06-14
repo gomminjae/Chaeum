@@ -56,6 +56,7 @@
 		B581F54C2C1B258D00A38D8C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F54B2C1B258D00A38D8C /* User.swift */; };
 		B581F54E2C1BDCEC00A38D8C /* OnboardingUseCase .swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */; };
 		B581F5512C1BDD2200A38D8C /* OnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */; };
+		B581F5542C1C823700A38D8C /* SegmentedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5532C1C823700A38D8C /* SegmentedProgressBar.swift */; };
 		B7DEE849A8285F47AFFD23BF /* Pods_Chaeum_ChaeumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +136,7 @@
 		B581F54B2C1B258D00A38D8C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingUseCase .swift"; sourceTree = "<group>"; };
 		B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepository.swift; sourceTree = "<group>"; };
+		B581F5532C1C823700A38D8C /* SegmentedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedProgressBar.swift; sourceTree = "<group>"; };
 		C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chaeum_ChaeumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAF5BAEA8927A43B2BB858D /* Pods-ChaeumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChaeumTests.debug.xcconfig"; path = "Target Support Files/Pods-ChaeumTests/Pods-ChaeumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -337,7 +339,7 @@
 		B524D43F2C01B83100BCA70E /* Presentations */ = {
 			isa = PBXGroup;
 			children = (
-				B581F53D2C0EBA3D00A38D8C /* Component */,
+				B581F53D2C0EBA3D00A38D8C /* Components */,
 				B581F5202C0D76D200A38D8C /* Onboarding  */,
 				B524D4762C0B584C00BCA70E /* Breath */,
 				B517EBCE2BEB21A600C8A942 /* Home */,
@@ -471,11 +473,12 @@
 			path = "Onboarding ";
 			sourceTree = "<group>";
 		};
-		B581F53D2C0EBA3D00A38D8C /* Component */ = {
+		B581F53D2C0EBA3D00A38D8C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B581F5532C1C823700A38D8C /* SegmentedProgressBar.swift */,
 			);
-			path = Component;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		B581F53E2C0EBF3900A38D8C /* Page */ = {
@@ -784,6 +787,7 @@
 				B500B9C92BF342610045A2D5 /* ScheduleReactor.swift in Sources */,
 				B581F51F2C0D514700A38D8C /* DependencyContainer.swift in Sources */,
 				B581F5242C0D76F600A38D8C /* OnboardingReactor.swift in Sources */,
+				B581F5542C1C823700A38D8C /* SegmentedProgressBar.swift in Sources */,
 				B581F54C2C1B258D00A38D8C /* User.swift in Sources */,
 				B581F5262C0D770700A38D8C /* OnboardingCoordinator.swift in Sources */,
 				B517EB972BEB11E500C8A942 /* SceneDelegate.swift in Sources */,

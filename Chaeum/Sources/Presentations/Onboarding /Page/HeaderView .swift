@@ -15,7 +15,7 @@ class HeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .orange
+        self.backgroundColor = .white
         
         
         
@@ -23,7 +23,7 @@ class HeaderView: UIView {
         
         titleLabel.snp.makeConstraints {
             $0.centerX.equalTo(self)
-            $0.top.equalTo(self).inset(40)
+            $0.top.equalTo(self).inset(80)
         }
     }
     

@@ -11,11 +11,16 @@ import RxCocoa
 import SnapKit
 import Then
 
+
+
+
 class OnboardingViewController: BaseViewController, UITextFieldDelegate {
     
     var appCoordinator: AppCoordinator?
     private let disposeBag = DisposeBag()
     private let currentPage = BehaviorRelay<Int>(value: 0)
+    
+let segmentedProgressBar = SegmentedProgressBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +33,10 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
         view.addSubview(nextButton)
         view.addSubview(prevButton)
         view.addSubview(startButton)
+        view.addSubview(segmentedProgressBar)
+
+        
+        segmentedProgressBar.progress = 0.6
         setupStackView()
     }
     
@@ -41,6 +50,14 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
             $0.width.equalTo(scrollView)
+        }
+        
+        segmentedProgressBar.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(view.safeAreaLayoutGuide).inset(40)
+            $0.width.equalTo(300)
+            $0.height.equalTo(20)
+            
         }
         
         nextButton.snp.makeConstraints {
@@ -66,7 +83,6 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
     }
     
     override func bindRX() {
-        // 페이지 변경 감지 및 버튼 가시성 업데이트
         currentPage
             .distinctUntilChanged()
             .observe(on: MainScheduler.instance)
@@ -80,7 +96,7 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
             })
             .disposed(by: disposeBag)
         
-        // Start 버튼 클릭 시 앱 코디네이터 시작
+       
         startButton.rx.tap
             .subscribe(onNext: { [unowned self] in
                 if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
