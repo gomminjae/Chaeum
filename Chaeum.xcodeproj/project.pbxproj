@@ -28,7 +28,7 @@
 		B524D3F82BFDAEF600BCA70E /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D3F72BFDAEF600BCA70E /* LoginCoordinator.swift */; };
 		B524D4412C0585F200BCA70E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4402C0585F200BCA70E /* TestViewController.swift */; };
 		B524D4432C0586F000BCA70E /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4422C0586F000BCA70E /* HomeCoordinator.swift */; };
-		B524D4492C05897100BCA70E /* CHTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4482C05897100BCA70E /* CHTextField.swift */; };
+		B524D4492C05897100BCA70E /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4482C05897100BCA70E /* FloatingTextField.swift */; };
 		B524D44C2C05997D00BCA70E /* DesignSystemColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D44B2C05997D00BCA70E /* DesignSystemColor.swift */; };
 		B524D44E2C05999F00BCA70E /* DesignSystemFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D44D2C05999F00BCA70E /* DesignSystemFont.swift */; };
 		B524D4512C059A9900BCA70E /* DesignSystemIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4502C059A9900BCA70E /* DesignSystemIcon.swift */; };
@@ -56,6 +56,7 @@
 		B581F54E2C1BDCEC00A38D8C /* OnboardingUseCase .swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */; };
 		B581F5512C1BDD2200A38D8C /* OnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */; };
 		B581F5542C1C823700A38D8C /* SegmentedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5532C1C823700A38D8C /* SegmentedProgressBar.swift */; };
+		B581F5572C25B98A00A38D8C /* Reactive+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5562C25B98A00A38D8C /* Reactive+TextField.swift */; };
 		B7DEE849A8285F47AFFD23BF /* Pods_Chaeum_ChaeumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,7 +109,7 @@
 		B524D3F72BFDAEF600BCA70E /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		B524D4402C0585F200BCA70E /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B524D4422C0586F000BCA70E /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		B524D4482C05897100BCA70E /* CHTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHTextField.swift; sourceTree = "<group>"; };
+		B524D4482C05897100BCA70E /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		B524D44B2C05997D00BCA70E /* DesignSystemColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemColor.swift; sourceTree = "<group>"; };
 		B524D44D2C05999F00BCA70E /* DesignSystemFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemFont.swift; sourceTree = "<group>"; };
 		B524D4502C059A9900BCA70E /* DesignSystemIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemIcon.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 		B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingUseCase .swift"; sourceTree = "<group>"; };
 		B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepository.swift; sourceTree = "<group>"; };
 		B581F5532C1C823700A38D8C /* SegmentedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedProgressBar.swift; sourceTree = "<group>"; };
+		B581F5562C25B98A00A38D8C /* Reactive+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+TextField.swift"; sourceTree = "<group>"; };
 		C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chaeum_ChaeumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAF5BAEA8927A43B2BB858D /* Pods-ChaeumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChaeumTests.debug.xcconfig"; path = "Target Support Files/Pods-ChaeumTests/Pods-ChaeumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -465,8 +467,9 @@
 		B581F53D2C0EBA3D00A38D8C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B524D4482C05897100BCA70E /* CHTextField.swift */,
+				B524D4482C05897100BCA70E /* FloatingTextField.swift */,
 				B581F5532C1C823700A38D8C /* SegmentedProgressBar.swift */,
+				B581F5562C25B98A00A38D8C /* Reactive+TextField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -760,7 +763,8 @@
 				B524D4512C059A9900BCA70E /* DesignSystemIcon.swift in Sources */,
 				B524D4782C0B586000BCA70E /* BreathViewController.swift in Sources */,
 				B581F5512C1BDD2200A38D8C /* OnboardingRepository.swift in Sources */,
-				B524D4492C05897100BCA70E /* CHTextField.swift in Sources */,
+				B581F5572C25B98A00A38D8C /* Reactive+TextField.swift in Sources */,
+				B524D4492C05897100BCA70E /* FloatingTextField.swift in Sources */,
 				B581F5462C0ED56800A38D8C /* JobCategoryView.swift in Sources */,
 				B581F5482C0ED57700A38D8C /* WorryCategoryView .swift in Sources */,
 				B524D44C2C05997D00BCA70E /* DesignSystemColor.swift in Sources */,

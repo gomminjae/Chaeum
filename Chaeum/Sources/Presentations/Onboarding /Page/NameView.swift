@@ -14,7 +14,7 @@ class NameView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .blue
+        self.backgroundColor = .clear
         
         addSubview(titleLabel)
         addSubview(textField)

@@ -57,7 +57,11 @@ class HomeViewController: BaseViewController {
 
     //MARK UI
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout()).then {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .clear
+    }
+    
+    lazy var calendar = FSCalendar(frame: .zero).then {
+        $0.appearance.selectionColor = .clear
     }
 
 }

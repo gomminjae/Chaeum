@@ -146,7 +146,7 @@ let segmentedProgressBar = SegmentedProgressBar()
     }
     
     lazy var stackView = UIStackView().then {
-        $0.backgroundColor = .white
+        $0.backgroundColor = .clear
         $0.axis = .vertical
         $0.distribution = .fill
         $0.spacing = 0

@@ -15,7 +15,7 @@ class HeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .white
+        self.backgroundColor = .clear
         
         
         
@@ -38,8 +38,8 @@ class HeaderView: UIView {
     
     //MARK: UI
     lazy var titleLabel = UILabel().then {
-        $0.text = "정보를 입력할게요"
-        //$0.textColor = .white
+        $0.text = "Welcome To Chaeum"
+        $0.font = UIFont.systemFont(ofSize: 24, weight: .bold)
     }
     lazy var headerImage = UIImageView()
 }
