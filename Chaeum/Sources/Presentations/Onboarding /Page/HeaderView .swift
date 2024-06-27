@@ -18,12 +18,17 @@ class HeaderView: UIView {
         self.backgroundColor = .clear
         
         
-        
+        addSubview(headerImage)
         addSubview(titleLabel)
         
         titleLabel.snp.makeConstraints {
             $0.centerX.equalTo(self)
             $0.top.equalTo(self).inset(80)
+        }
+        headerImage.snp.makeConstraints {
+            $0.top.equalTo(self)
+            $0.leading.trailing.equalTo(self)
+            $0.bottom.equalTo(self)
         }
     }
     
@@ -39,9 +44,12 @@ class HeaderView: UIView {
     //MARK: UI
     lazy var titleLabel = UILabel().then {
         $0.text = "Welcome To Chaeum"
+        $0.textColor = .white
         $0.font = UIFont.systemFont(ofSize: 24, weight: .bold)
     }
-    lazy var headerImage = UIImageView()
+    lazy var headerImage = UIImageView().then {
+        $0.image = UIImage(named: "first")
+    }
 }
 
 

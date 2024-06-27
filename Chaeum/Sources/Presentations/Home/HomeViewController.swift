@@ -9,9 +9,12 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
+import RxDataSources
 import Then
 import ReactorKit
 import FSCalendar
+
+
 
 
 
@@ -22,7 +25,7 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        
         
         // Do any additional setup after loading the view.
     }

@@ -14,7 +14,7 @@ class OnboardingReactor: Reactor {
     enum Action {
         case setName(String)
         case setNickname(String)
-        case setJobCategory(String)
+        case setJobCategory([String])
         case setBirthdate(Date)
         case setGoal(String)
         case save
@@ -23,7 +23,7 @@ class OnboardingReactor: Reactor {
     enum Mutation {
         case setName(String)
         case setNickname(String)
-        case setJobCategory(String)
+        case setJobCategory([String])
         case setBirthdate(Date)
         case setGoal(String)
         case setSaved(Bool)
@@ -32,7 +32,7 @@ class OnboardingReactor: Reactor {
     struct State {
         var name: String = User().name
         var nickname: String = User().nickname
-        var jobCategory: String = User().jobCategory
+        var jobCategory: [String] = User().jobCategory
         var birthdate: Date = User().birthdate
         var goal: String = User().goal
         var isSaved: Bool = false

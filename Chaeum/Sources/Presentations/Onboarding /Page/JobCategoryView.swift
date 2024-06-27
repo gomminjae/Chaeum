@@ -36,9 +36,14 @@ class JobCategoryView: UIView {
         $0.text = "정보를 입력할게요"
         $0.textColor = .white
     }
-    lazy var headerImage = UIImageView().then {
-        $0.backgroundColor = .red
-    }
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewLayout()
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        
+        return view
+    }()
+  
     
     
 }
+

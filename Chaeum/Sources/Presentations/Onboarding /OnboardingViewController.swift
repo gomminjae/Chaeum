@@ -28,7 +28,6 @@ let segmentedProgressBar = SegmentedProgressBar()
     
     override func setupViews() {
         view.addSubview(scrollView)
-        view.backgroundColor = .white
         scrollView.addSubview(stackView)
         view.addSubview(nextButton)
         view.addSubview(prevButton)
@@ -126,13 +125,13 @@ let segmentedProgressBar = SegmentedProgressBar()
         
         let headerView = HeaderView()
         let nameView = NameView()
-        let nickNameView = NickNameView()
         
-        [headerView, nameView, nickNameView].forEach { view in
+        
+        [headerView, nameView].forEach { view in
             stackView.addArrangedSubview(view)
             
             view.snp.makeConstraints {
-                $0.height.equalTo(800)
+                $0.height.equalTo(300)
             }
         }
     }
@@ -141,7 +140,7 @@ let segmentedProgressBar = SegmentedProgressBar()
     lazy var scrollView = UIScrollView().then {
         $0.isPagingEnabled = true
         $0.showsVerticalScrollIndicator = false
-        $0.isScrollEnabled = false
+        $0.isScrollEnabled = true
         $0.delegate = self
     }
     

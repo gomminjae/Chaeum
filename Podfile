@@ -6,7 +6,8 @@ target 'Chaeum' do
   use_frameworks!
   pod 'RxSwift' 
   pod 'RxCocoa'
-  pod 'RxKeyboard' 
+  pod 'RxKeyboard'
+  pod 'RxDataSources'
   pod 'SnapKit' 
   pod 'Alamofire'
   pod 'Then'
@@ -14,6 +15,7 @@ target 'Chaeum' do
   pod 'RealmSwift'
   pod 'ReactorKit'
   pod 'FSCalendar'
+  pod 'TextFieldEffects'
   # Pods for Chaeum
 
   target 'ChaeumTests' do

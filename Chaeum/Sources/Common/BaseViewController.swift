@@ -11,8 +11,10 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(red: 0.09, green: 0.09, blue: 0.12, alpha: 1.00)
         setupViews()
-        setupGradientBackground()
+    
+
         setupConstraints()
         bindRX()
 
@@ -27,16 +29,6 @@ class BaseViewController: UIViewController {
     
     //bind RX
     func bindRX() {}
-    
-    private func setupGradientBackground() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.colors = [UIColor(hex: "#252734").cgColor, UIColor(hex: "#141A26").cgColor]
-        gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
-        gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
-        view.layer.insertSublayer(gradientLayer, at: 0)
-        view.backgroundColor = .clear
-    }
     
 
 }

@@ -17,8 +17,8 @@ struct User {
     @UserDefault(key: "birthdate", defaultValue: Date())
     var birthdate: Date
 
-    @UserDefault(key: "jobCategory", defaultValue: "")
-    var jobCategory: String
+    @UserDefault(key: "jobCategory", defaultValue: [])
+    var jobCategory: [String]
     
     @UserDefault(key: "goal", defaultValue: "")
     var goal: String
