@@ -4,16 +4,27 @@
 target 'Chaeum' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  #RxSwift
   pod 'RxSwift' 
   pod 'RxCocoa'
   pod 'RxKeyboard'
   pod 'RxDataSources'
-  pod 'SnapKit' 
+
+  #Layout 
+  pod 'SnapKit'
+
+  #Networking
   pod 'Alamofire'
+
+  #Storage
+  pod 'RealmSwift'
+
+  #Archi
+  pod 'ReactorKit'
+
+  #ETC 
   pod 'Then'
   pod 'lottie-ios'
-  pod 'RealmSwift'
-  pod 'ReactorKit'
   pod 'FSCalendar'
   pod 'TextFieldEffects'
   # Pods for Chaeum
