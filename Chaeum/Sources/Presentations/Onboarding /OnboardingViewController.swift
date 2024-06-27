@@ -20,11 +20,26 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
     private let disposeBag = DisposeBag()
     private let currentPage = BehaviorRelay<Int>(value: 0)
     
-let segmentedProgressBar = SegmentedProgressBar()
+   
+    
+    private let categories: [String] = ["기획,전략", "인사,HR", "회계,세무", "개발,데이터", "디자인", "양업", "금융,보험"]
+ 
+    private var jobCategoryReactor: JobCategoryReactor!
+        
+    
+    let segmentedProgressBar = SegmentedProgressBar()
+    
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupJobCategoryReactor()
     }
+    
+    private func setupJobCategoryReactor() {
+            jobCategoryReactor = JobCategoryReactor(data: categories)
+        }
     
     override func setupViews() {
         view.addSubview(scrollView)
@@ -94,12 +109,7 @@ let segmentedProgressBar = SegmentedProgressBar()
                 }
             })
             .disposed(by: disposeBag)
-//        currentPage
-//            .map { CGFloat($0) / CGFloat(self.segmentedProgressBar.segmentCount)}
-//            .bind(to: Binder(self) { (vc,progress) in
-//                vc.segmentedProgressBar.progress = progress
-//            })
-//            .disposed(by: disposeBag)
+
         
         currentPage
             .map { CGFloat($0) / CGFloat(self.segmentedProgressBar.segmentCount)}
@@ -121,13 +131,24 @@ let segmentedProgressBar = SegmentedProgressBar()
             .disposed(by: disposeBag)
     }
     
+    private func bindReactor(reactor: JobCategoryReactor) {
+        reactor.state
+            .map { $0.categories }
+            .bind(to: jobCategoryView.rx.items(cellIdentifier: JobCategoryCell.reusableIdentifier, cellType: JobCategoryCell.self)) { (index,model,cell) in
+                cell.configure(with: model)
+            }
+            .disposed(by: disposeBag)
+        
+    }
+    
     private func setupStackView() {
         
         let headerView = HeaderView()
         let nameView = NameView()
+       
         
         
-        [headerView, nameView].forEach { view in
+        [headerView, nameView,jobCategoryView].forEach { view in
             stackView.addArrangedSubview(view)
             
             view.snp.makeConstraints {
@@ -168,6 +189,14 @@ let segmentedProgressBar = SegmentedProgressBar()
         $0.setTitle("시작하기", for: .normal)
         $0.isHidden = true
     }
+    lazy var jobCategoryView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.register(JobCategoryCell.self, forCellWithReuseIdentifier: JobCategoryCell.reusableIdentifier)
+        view.backgroundColor = .clear
+        return view
+    }()
 
     @objc func nextTapped(_ sender: UIButton) {
         let pageHeight = scrollView.frame.size.height

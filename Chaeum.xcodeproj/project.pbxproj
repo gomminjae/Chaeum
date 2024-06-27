@@ -54,6 +54,9 @@
 		B581F5512C1BDD2200A38D8C /* OnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */; };
 		B581F5542C1C823700A38D8C /* SegmentedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5532C1C823700A38D8C /* SegmentedProgressBar.swift */; };
 		B581F5572C25B98A00A38D8C /* Reactive+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5562C25B98A00A38D8C /* Reactive+TextField.swift */; };
+		B581F5592C2D9BB200A38D8C /* JobCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5582C2D9BB200A38D8C /* JobCategoryCell.swift */; };
+		B581F55D2C2D9D2700A38D8C /* JobCategoryReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F55C2C2D9D2700A38D8C /* JobCategoryReactor.swift */; };
+		B581F55F2C2DA19300A38D8C /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F55E2C2DA19300A38D8C /* ReusableIdentifier.swift */; };
 		B7DEE849A8285F47AFFD23BF /* Pods_Chaeum_ChaeumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +134,9 @@
 		B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepository.swift; sourceTree = "<group>"; };
 		B581F5532C1C823700A38D8C /* SegmentedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedProgressBar.swift; sourceTree = "<group>"; };
 		B581F5562C25B98A00A38D8C /* Reactive+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+TextField.swift"; sourceTree = "<group>"; };
+		B581F5582C2D9BB200A38D8C /* JobCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryCell.swift; sourceTree = "<group>"; };
+		B581F55C2C2D9D2700A38D8C /* JobCategoryReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryReactor.swift; sourceTree = "<group>"; };
+		B581F55E2C2DA19300A38D8C /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
 		C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chaeum_ChaeumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAF5BAEA8927A43B2BB858D /* Pods-ChaeumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChaeumTests.debug.xcconfig"; path = "Target Support Files/Pods-ChaeumTests/Pods-ChaeumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -382,6 +388,7 @@
 			children = (
 				B524D4572C05A77200BCA70E /* ViewModelType.swift */,
 				B524D4592C060FC100BCA70E /* BaseViewController.swift */,
+				B581F55E2C2DA19300A38D8C /* ReusableIdentifier.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -441,9 +448,10 @@
 		B581F5202C0D76D200A38D8C /* Onboarding  */ = {
 			isa = PBXGroup;
 			children = (
+				B581F55B2C2D9D1700A38D8C /* Reactors */,
+				B581F55A2C2D9BB600A38D8C /* Cells */,
 				B581F53E2C0EBF3900A38D8C /* Page */,
 				B581F5212C0D76E300A38D8C /* OnboardingViewController.swift */,
-				B581F5232C0D76F600A38D8C /* OnboardingReactor.swift */,
 			);
 			path = "Onboarding ";
 			sourceTree = "<group>";
@@ -467,6 +475,23 @@
 				B581F5472C0ED57700A38D8C /* WorryCategoryView .swift */,
 			);
 			path = Page;
+			sourceTree = "<group>";
+		};
+		B581F55A2C2D9BB600A38D8C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B581F5582C2D9BB200A38D8C /* JobCategoryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B581F55B2C2D9D1700A38D8C /* Reactors */ = {
+			isa = PBXGroup;
+			children = (
+				B581F5232C0D76F600A38D8C /* OnboardingReactor.swift */,
+				B581F55C2C2D9D2700A38D8C /* JobCategoryReactor.swift */,
+			);
+			path = Reactors;
 			sourceTree = "<group>";
 		};
 		C5EAAB83B87627A33A3267C3 /* Frameworks */ = {
@@ -746,10 +771,12 @@
 				B524D4512C059A9900BCA70E /* DesignSystemIcon.swift in Sources */,
 				B524D4782C0B586000BCA70E /* BreathViewController.swift in Sources */,
 				B581F5512C1BDD2200A38D8C /* OnboardingRepository.swift in Sources */,
+				B581F55F2C2DA19300A38D8C /* ReusableIdentifier.swift in Sources */,
 				B581F5572C25B98A00A38D8C /* Reactive+TextField.swift in Sources */,
 				B524D4492C05897100BCA70E /* FloatingTextField.swift in Sources */,
 				B581F5462C0ED56800A38D8C /* JobCategoryView.swift in Sources */,
 				B581F5482C0ED57700A38D8C /* WorryCategoryView .swift in Sources */,
+				B581F55D2C2D9D2700A38D8C /* JobCategoryReactor.swift in Sources */,
 				B524D44C2C05997D00BCA70E /* DesignSystemColor.swift in Sources */,
 				B500B9D32BF345C10045A2D5 /* SettingViewModel.swift in Sources */,
 				B581F5142C0C30BD00A38D8C /* Theme.swift in Sources */,
@@ -764,6 +791,7 @@
 				B581F5242C0D76F600A38D8C /* OnboardingReactor.swift in Sources */,
 				B581F5542C1C823700A38D8C /* SegmentedProgressBar.swift in Sources */,
 				B581F54C2C1B258D00A38D8C /* User.swift in Sources */,
+				B581F5592C2D9BB200A38D8C /* JobCategoryCell.swift in Sources */,
 				B581F5262C0D770700A38D8C /* OnboardingCoordinator.swift in Sources */,
 				B517EB972BEB11E500C8A942 /* SceneDelegate.swift in Sources */,
 				B581F51B2C0CBE0000A38D8C /* HomeReactor.swift in Sources */,

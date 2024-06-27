@@ -15,7 +15,7 @@ class NameView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .clear
+        
         
         addSubview(titleLabel)
         addSubview(textField)
@@ -58,19 +58,19 @@ class NameView: UIView {
     func setupView() {}
     
     private func setupDatePicker() {
-        // UIDatePicker 객체 생성을 해줍니다.
+        
         let datePicker = UIDatePicker()
-        // datePickerModed에는 time, date, dateAndTime, countDownTimer가 존재합니다.
+        
         datePicker.datePickerMode = .date
-        // datePicker 스타일을 설정합니다. wheels, inline, compact, automatic이 존재합니다.
+        
         datePicker.preferredDatePickerStyle = .wheels
-        // 원하는 언어로 지역 설정도 가능합니다.
+        
         datePicker.locale = Locale(identifier: "ko-KR")
-        // 값이 변할 때마다 동작을 설정해 줌
+       
         datePicker.addTarget(self, action: #selector(dateChange), for: .valueChanged)
-        // textField의 inputView가 nil이라면 기본 할당은 키보드입니다.
+       
         textField.inputView = datePicker
-        // textField에 오늘 날짜로 표시되게 설정
+        
         textField.text = dateFormat(date: Date())
     }
     
@@ -99,21 +99,25 @@ class NameView: UIView {
         $0.placeholder = "이름을 입력하세요"
         $0.textColor = .white
         $0.backgroundColor = UIColor(red: 0.13, green: 0.13, blue: 0.15, alpha: 1.00)
-        $0.borderActiveColor = .purple
+        $0.borderActiveColor = .mainPurple
+        $0.borderInactiveColor = .mainPurple
+        
     }
     lazy var nickNameField = HoshiTextField().then {
         $0.placeholderColor = .lightGray
         $0.placeholder = "닉네임을 입력하세요"
         $0.textColor = .white
         $0.backgroundColor = UIColor(red: 0.13, green: 0.13, blue: 0.15, alpha: 1.00)
-        $0.borderActiveColor = .purple
+        $0.borderActiveColor = .mainPurple
+        $0.borderInactiveColor = .mainPurple
     }
     lazy var birthDateField = HoshiTextField().then {
         $0.placeholder = "생년월일을 입력하세요"
         $0.placeholderColor = .lightGray
         $0.textColor = .white
         $0.backgroundColor = UIColor(red: 0.13, green: 0.13, blue: 0.15, alpha: 1.00)
-        $0.borderActiveColor = .purple
+        $0.borderActiveColor = .mainPurple
+        $0.borderInactiveColor = .mainPurple
     }
     
     

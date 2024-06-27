@@ -15,7 +15,7 @@ class HeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .clear
+        self.backgroundColor = .contentColor
         
         
         addSubview(headerImage)
