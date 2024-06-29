@@ -33,7 +33,7 @@ class JobCategoryCell: UICollectionViewCell {
         label.textAlignment = .center
         
         contentView.layer.borderWidth = 1
-        contentView.layer.borderColor = UIColor.gray.cgColor
+        contentView.layer.borderColor = UIColor.mainPurple.cgColor
         contentView.layer.cornerRadius = 8
     }
     

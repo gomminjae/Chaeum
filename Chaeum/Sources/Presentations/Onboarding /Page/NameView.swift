@@ -24,12 +24,14 @@ class NameView: UIView {
         
         
         titleLabel.snp.makeConstraints {
-            $0.leading.equalTo(self).inset(40)
-            $0.top.equalTo(self.safeAreaLayoutGuide).inset(50)
+            $0.leading.equalTo(self).inset(20)
+            $0.trailing.equalTo(self).inset(20)
+            $0.top.equalTo(self.safeAreaLayoutGuide).inset(80)
         }
         textField.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(20)
             $0.leading.equalTo(titleLabel.snp.leading)
+            $0.trailing.equalTo(self).inset(20)
             $0.height.equalTo(40)
             $0.width.equalTo(250)
 
@@ -37,6 +39,7 @@ class NameView: UIView {
         nickNameField.snp.makeConstraints {
             $0.top.equalTo(textField.snp.bottom).offset(20)
             $0.leading.equalTo(titleLabel.snp.leading)
+            $0.trailing.equalTo(self).inset(20)
             $0.height.equalTo(40)
             $0.width.equalTo(250)
 
@@ -44,6 +47,7 @@ class NameView: UIView {
         birthDateField.snp.makeConstraints {
             $0.top.equalTo(nickNameField.snp.bottom).offset(20)
             $0.leading.equalTo(titleLabel.snp.leading)
+            $0.trailing.equalTo(self).inset(20)
             $0.height.equalTo(40)
             $0.width.equalTo(250)
         }
@@ -91,7 +95,7 @@ class NameView: UIView {
     //MARK: UI
     lazy var titleLabel = UILabel().then {
         $0.text = "정보를 입력해주세요."
-        $0.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         $0.textColor = .white
     }
     lazy var textField = HoshiTextField().then {

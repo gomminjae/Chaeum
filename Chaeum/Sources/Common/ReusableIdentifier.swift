@@ -12,6 +12,6 @@ import Foundation
 extension NSObject {
     
     static var reusableIdentifier: String {
-        return String.init(describing: self)
+        return String(describing: self)
     }
 }

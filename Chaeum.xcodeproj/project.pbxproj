@@ -47,7 +47,6 @@
 		B581F5262C0D770700A38D8C /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5252C0D770700A38D8C /* OnboardingCoordinator.swift */; };
 		B581F5402C0EBF4300A38D8C /* HeaderView .swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F53F2C0EBF4300A38D8C /* HeaderView .swift */; };
 		B581F5422C0ED54B00A38D8C /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5412C0ED54B00A38D8C /* NameView.swift */; };
-		B581F5462C0ED56800A38D8C /* JobCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5452C0ED56800A38D8C /* JobCategoryView.swift */; };
 		B581F5482C0ED57700A38D8C /* WorryCategoryView .swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5472C0ED57700A38D8C /* WorryCategoryView .swift */; };
 		B581F54C2C1B258D00A38D8C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F54B2C1B258D00A38D8C /* User.swift */; };
 		B581F54E2C1BDCEC00A38D8C /* OnboardingUseCase .swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */; };
@@ -127,7 +126,6 @@
 		B581F5252C0D770700A38D8C /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		B581F53F2C0EBF4300A38D8C /* HeaderView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeaderView .swift"; sourceTree = "<group>"; };
 		B581F5412C0ED54B00A38D8C /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
-		B581F5452C0ED56800A38D8C /* JobCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryView.swift; sourceTree = "<group>"; };
 		B581F5472C0ED57700A38D8C /* WorryCategoryView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WorryCategoryView .swift"; sourceTree = "<group>"; };
 		B581F54B2C1B258D00A38D8C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingUseCase .swift"; sourceTree = "<group>"; };
@@ -471,7 +469,6 @@
 			children = (
 				B581F53F2C0EBF4300A38D8C /* HeaderView .swift */,
 				B581F5412C0ED54B00A38D8C /* NameView.swift */,
-				B581F5452C0ED56800A38D8C /* JobCategoryView.swift */,
 				B581F5472C0ED57700A38D8C /* WorryCategoryView .swift */,
 			);
 			path = Page;
@@ -774,7 +771,6 @@
 				B581F55F2C2DA19300A38D8C /* ReusableIdentifier.swift in Sources */,
 				B581F5572C25B98A00A38D8C /* Reactive+TextField.swift in Sources */,
 				B524D4492C05897100BCA70E /* FloatingTextField.swift in Sources */,
-				B581F5462C0ED56800A38D8C /* JobCategoryView.swift in Sources */,
 				B581F5482C0ED57700A38D8C /* WorryCategoryView .swift in Sources */,
 				B581F55D2C2D9D2700A38D8C /* JobCategoryReactor.swift in Sources */,
 				B524D44C2C05997D00BCA70E /* DesignSystemColor.swift in Sources */,

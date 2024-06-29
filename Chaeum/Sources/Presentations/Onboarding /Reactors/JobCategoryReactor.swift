@@ -22,14 +22,14 @@ class JobCategoryReactor: Reactor {
     
     struct State {
         var categories: [String]
-        var selectedItems: [IndexPath]?
+        var selectedItems: [IndexPath]
     }
     
     let initialState: State
     
     
     init(data: [String]) {
-        self.initialState = State(categories: data)
+        self.initialState = State(categories: data, selectedItems: [])
     }
 
 }
