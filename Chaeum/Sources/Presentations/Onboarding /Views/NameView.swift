@@ -105,6 +105,7 @@ class NameView: UIView {
         $0.backgroundColor = UIColor(red: 0.13, green: 0.13, blue: 0.15, alpha: 1.00)
         $0.borderActiveColor = .mainPurple
         $0.borderInactiveColor = .mainPurple
+        $0.layer.cornerRadius = 15
         
     }
     lazy var nickNameField = HoshiTextField().then {
@@ -114,6 +115,7 @@ class NameView: UIView {
         $0.backgroundColor = UIColor(red: 0.13, green: 0.13, blue: 0.15, alpha: 1.00)
         $0.borderActiveColor = .mainPurple
         $0.borderInactiveColor = .mainPurple
+        $0.layer.cornerRadius = 15
     }
     lazy var birthDateField = HoshiTextField().then {
         $0.placeholder = "생년월일을 입력하세요"
@@ -122,6 +124,7 @@ class NameView: UIView {
         $0.backgroundColor = UIColor(red: 0.13, green: 0.13, blue: 0.15, alpha: 1.00)
         $0.borderActiveColor = .mainPurple
         $0.borderInactiveColor = .mainPurple
+        $0.layer.cornerRadius = 15
     }
     
     

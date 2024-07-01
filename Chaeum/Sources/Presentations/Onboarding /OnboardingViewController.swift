@@ -11,37 +11,38 @@ import RxCocoa
 import SnapKit
 import Then
 
-
-
-
 class OnboardingViewController: BaseViewController, UITextFieldDelegate {
     
     private var appCoordinator: AppCoordinator?
     private let disposeBag = DisposeBag()
     private let currentPage = BehaviorRelay<Int>(value: 0)
-    
-   
-    
-    private let categories: [String] = ["기획,전략", "인사,HR", "회계,세무", "개발,데이터", "디자인", "양업", "금융,보험","건설,건축","생산","복지","연구,R&D","교육","미디어","스포츠","마케팅,홍보"]
  
-    private var jobCategoryReactor: JobCategoryReactor!
+    private var jobCategoryReactor: JobCategoryReactor?
         
     
     let segmentedProgressBar = SegmentedProgressBar()
-    
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupJobCategoryReactor()
-        bindReactor(reactor: jobCategoryReactor)
+        if let reactor = jobCategoryReactor {
+            bindReactor(reactor: reactor)
+        }
+
+    }
+
+    init() {
+        let repository = JobCategoryRepositoryImpl()
+        let reactor = JobCategoryReactor(repository: repository)
+        self.jobCategoryReactor = reactor
         
+        super.init(nibName: nil, bundle: nil)
     }
     
-    private func setupJobCategoryReactor() {
-            jobCategoryReactor = JobCategoryReactor(data: categories)
-        }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+
     
     override func setupViews() {
         view.addSubview(scrollView)
@@ -50,10 +51,11 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
 //        view.addSubview(prevButton)
         view.addSubview(startButton)
         view.addSubview(segmentedProgressBar)
-
         
         segmentedProgressBar.progress = 0.6
         setupStackView()
+
+
     }
     
     override func setupConstraints() {
@@ -133,54 +135,43 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
                 appCoordinator?.start()
             })
             .disposed(by: disposeBag)
-        
-   
-        
-        
-       
-            
+
     }
     
     private func bindReactor(reactor: JobCategoryReactor) {
-        reactor.state
-            .map { $0.categories }
-            .bind(to: jobCategoryView.rx.items(cellIdentifier: "category", cellType: JobCategoryCell.self)) { (index,model,cell) in
+
+
+        jobCategoryView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
+        
+        jobCategoryView.rx.itemSelected
+            .map { JobCategoryReactor.Action.selectItem($0) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        jobCategoryView.rx.itemDeselected
+            .map { JobCategoryReactor.Action.deselectItem($0) }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+
+        reactor.state.map { $0.categories }
+            .bind(to: jobCategoryView.rx.items(cellIdentifier: "category", cellType: JobCategoryCell.self)) { (index, model, cell) in
                 cell.configure(with: model)
             }
             .disposed(by: disposeBag)
         
-        jobCategoryView.rx.setDelegate(self)
-            .disposed(by: disposeBag)
-        
-        Observable
-            .merge(
-                jobCategoryView.rx.itemSelected.map { ($0, true) },
-                jobCategoryView.rx.itemDeselected.map { ($0, false) }
-            )
-            .scan([]) { selected, event in
-                var selected = selected
-                if event.1 {
-                    selected.append(event.0)
-                } else {
-                    if let index = selected.firstIndex(of: event.0) {
-                        selected.remove(at: index)
-                    }
-                }
-                return selected
-            }
-            .map { JobCategoryReactor.Action.selectedItems($0) }
-            .bind(to: reactor.action)
-                    .disposed(by: disposeBag)
-        
-        reactor.state
-            .map { $0.selectedItems }
+        reactor.state.map { $0.selectedItems }
             .distinctUntilChanged()
             .bind(onNext: { [weak self] selectedIndexPaths in
-                print(selectedIndexPaths)
                 guard let self = self else { return }
-                for indexPath in self.jobCategoryView.indexPathsForVisibleItems {
+
+                self.jobCategoryView.reloadData()
+
+
+                for indexPath in selectedIndexPaths {
                     if let cell = self.jobCategoryView.cellForItem(at: indexPath) {
-                        cell.backgroundColor = selectedIndexPaths.contains(indexPath) ? .white : .contentColor
+                        cell.backgroundColor = .white
                     }
                 }
             })
@@ -189,18 +180,21 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
     }
     
     private func setupStackView() {
-        
-        let headerView = HeaderView()
-        let nameView = NameView()
        
+        stackView.addArrangedSubview(nameView)
+        stackView.addArrangedSubview(jobCategoryView)
+        stackView.addArrangedSubview(worryView)
         
-        
-        [nameView,jobCategoryView].forEach { view in
-            stackView.addArrangedSubview(view)
-            
-            view.snp.makeConstraints {
-                $0.height.equalTo(300)
-            }
+        nameView.snp.makeConstraints {
+            $0.height.equalTo(300)
+        }
+        jobCategoryView.snp.makeConstraints {
+            $0.height.equalTo(200)
+            $0.left.right.equalTo(view).inset(20)
+        }
+        worryView.snp.makeConstraints {
+            $0.height.equalTo(600)
+
         }
     }
     
@@ -236,17 +230,23 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
         $0.setTitle("시작하기", for: .normal)
         $0.isHidden = true
     }
+
+    let headerView = HeaderView()
+    let nameView = NameView()
     lazy var jobCategoryView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        layout.minimumInteritemSpacing = 15
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        layout.minimumInteritemSpacing = 3
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.register(JobCategoryCell.self, forCellWithReuseIdentifier: "category")
         view.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
-        view.backgroundColor = .clear
+        view.backgroundColor = .contentColor
+        view.layer.cornerRadius = 15
+        view.isScrollEnabled = false 
         return view
     }()
+    let worryView = WorryCategoryView()
 
     @objc func nextTapped(_ sender: UIButton) {
         let pageHeight = scrollView.frame.size.height
@@ -289,13 +289,15 @@ extension OnboardingViewController: UIScrollViewDelegate {
 
 extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath)
-            header.backgroundColor = .red
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath)
+        header.backgroundColor = .clear
 
-            let label = UILabel(frame: header.bounds)
-            label.text = "Header"
-            header.addSubview(label)
+        let label = UILabel(frame: header.bounds)
+        label.text = "Header"
+        label.textColor = .white
 
-            return header
-        }
+        header.addSubview(label)
+
+        return header
+    }
 }
