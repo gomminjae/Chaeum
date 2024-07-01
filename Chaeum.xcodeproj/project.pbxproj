@@ -25,7 +25,6 @@
 		B517EBD02BEB21B800C8A942 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517EBCF2BEB21B800C8A942 /* HomeViewController.swift */; };
 		B524D4412C0585F200BCA70E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4402C0585F200BCA70E /* TestViewController.swift */; };
 		B524D4432C0586F000BCA70E /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4422C0586F000BCA70E /* HomeCoordinator.swift */; };
-		B524D4492C05897100BCA70E /* FloatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4482C05897100BCA70E /* FloatingTextField.swift */; };
 		B524D44C2C05997D00BCA70E /* DesignSystemColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D44B2C05997D00BCA70E /* DesignSystemColor.swift */; };
 		B524D44E2C05999F00BCA70E /* DesignSystemFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D44D2C05999F00BCA70E /* DesignSystemFont.swift */; };
 		B524D4512C059A9900BCA70E /* DesignSystemIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4502C059A9900BCA70E /* DesignSystemIcon.swift */; };
@@ -51,11 +50,12 @@
 		B581F54E2C1BDCEC00A38D8C /* OnboardingUseCase .swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */; };
 		B581F5512C1BDD2200A38D8C /* OnboardingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */; };
 		B581F5542C1C823700A38D8C /* SegmentedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5532C1C823700A38D8C /* SegmentedProgressBar.swift */; };
-		B581F5572C25B98A00A38D8C /* Reactive+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5562C25B98A00A38D8C /* Reactive+TextField.swift */; };
 		B581F5592C2D9BB200A38D8C /* JobCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5582C2D9BB200A38D8C /* JobCategoryCell.swift */; };
 		B581F55D2C2D9D2700A38D8C /* JobCategoryReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F55C2C2D9D2700A38D8C /* JobCategoryReactor.swift */; };
 		B581F55F2C2DA19300A38D8C /* ReusableIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F55E2C2DA19300A38D8C /* ReusableIdentifier.swift */; };
 		B581F5612C3278D400A38D8C /* JobCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5602C3278D400A38D8C /* JobCategoryRepository.swift */; };
+		B581F5632C32D11600A38D8C /* Gravity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5622C32D11600A38D8C /* Gravity.swift */; };
+		B581F5652C32D1B900A38D8C /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5642C32D1B900A38D8C /* BubbleView.swift */; };
 		B7DEE849A8285F47AFFD23BF /* Pods_Chaeum_ChaeumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,7 +105,6 @@
 		B517EBCF2BEB21B800C8A942 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B524D4402C0585F200BCA70E /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B524D4422C0586F000BCA70E /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		B524D4482C05897100BCA70E /* FloatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTextField.swift; sourceTree = "<group>"; };
 		B524D44B2C05997D00BCA70E /* DesignSystemColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemColor.swift; sourceTree = "<group>"; };
 		B524D44D2C05999F00BCA70E /* DesignSystemFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemFont.swift; sourceTree = "<group>"; };
 		B524D4502C059A9900BCA70E /* DesignSystemIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemIcon.swift; sourceTree = "<group>"; };
@@ -130,11 +129,12 @@
 		B581F54D2C1BDCEC00A38D8C /* OnboardingUseCase .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingUseCase .swift"; sourceTree = "<group>"; };
 		B581F5502C1BDD2200A38D8C /* OnboardingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRepository.swift; sourceTree = "<group>"; };
 		B581F5532C1C823700A38D8C /* SegmentedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedProgressBar.swift; sourceTree = "<group>"; };
-		B581F5562C25B98A00A38D8C /* Reactive+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+TextField.swift"; sourceTree = "<group>"; };
 		B581F5582C2D9BB200A38D8C /* JobCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryCell.swift; sourceTree = "<group>"; };
 		B581F55C2C2D9D2700A38D8C /* JobCategoryReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryReactor.swift; sourceTree = "<group>"; };
 		B581F55E2C2DA19300A38D8C /* ReusableIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableIdentifier.swift; sourceTree = "<group>"; };
 		B581F5602C3278D400A38D8C /* JobCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCategoryRepository.swift; sourceTree = "<group>"; };
+		B581F5622C32D11600A38D8C /* Gravity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gravity.swift; sourceTree = "<group>"; };
+		B581F5642C32D1B900A38D8C /* BubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chaeum_ChaeumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAF5BAEA8927A43B2BB858D /* Pods-ChaeumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChaeumTests.debug.xcconfig"; path = "Target Support Files/Pods-ChaeumTests/Pods-ChaeumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -457,9 +457,8 @@
 		B581F53D2C0EBA3D00A38D8C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B524D4482C05897100BCA70E /* FloatingTextField.swift */,
 				B581F5532C1C823700A38D8C /* SegmentedProgressBar.swift */,
-				B581F5562C25B98A00A38D8C /* Reactive+TextField.swift */,
+				B581F5622C32D11600A38D8C /* Gravity.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -470,6 +469,7 @@
 				B581F53F2C0EBF4300A38D8C /* HeaderView .swift */,
 				B581F5412C0ED54B00A38D8C /* NameView.swift */,
 				B581F5472C0ED57700A38D8C /* WorryCategoryView .swift */,
+				B581F5642C32D1B900A38D8C /* BubbleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -769,10 +769,9 @@
 				B524D4782C0B586000BCA70E /* BreathViewController.swift in Sources */,
 				B581F5512C1BDD2200A38D8C /* OnboardingRepository.swift in Sources */,
 				B581F55F2C2DA19300A38D8C /* ReusableIdentifier.swift in Sources */,
-				B581F5572C25B98A00A38D8C /* Reactive+TextField.swift in Sources */,
-				B524D4492C05897100BCA70E /* FloatingTextField.swift in Sources */,
 				B581F5482C0ED57700A38D8C /* WorryCategoryView .swift in Sources */,
 				B581F55D2C2D9D2700A38D8C /* JobCategoryReactor.swift in Sources */,
+				B581F5632C32D11600A38D8C /* Gravity.swift in Sources */,
 				B524D44C2C05997D00BCA70E /* DesignSystemColor.swift in Sources */,
 				B500B9D32BF345C10045A2D5 /* SettingViewModel.swift in Sources */,
 				B581F5142C0C30BD00A38D8C /* Theme.swift in Sources */,
@@ -783,6 +782,7 @@
 				B524D4412C0585F200BCA70E /* TestViewController.swift in Sources */,
 				B500B9C92BF342610045A2D5 /* ScheduleReactor.swift in Sources */,
 				B581F51F2C0D514700A38D8C /* DependencyContainer.swift in Sources */,
+				B581F5652C32D1B900A38D8C /* BubbleView.swift in Sources */,
 				B581F5242C0D76F600A38D8C /* OnboardingReactor.swift in Sources */,
 				B581F5542C1C823700A38D8C /* SegmentedProgressBar.swift in Sources */,
 				B581F54C2C1B258D00A38D8C /* User.swift in Sources */,

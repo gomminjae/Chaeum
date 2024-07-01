@@ -21,6 +21,16 @@ class JobCategoryCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override var isSelected: Bool {
+        didSet {
+            if isSelected {
+                backgroundColor = .subPurple
+            } else {
+                backgroundColor = .contentColor
+            }
+        }
+    }
+    
     private func setupUI() {
         contentView.addSubview(label)
         
@@ -28,11 +38,11 @@ class JobCategoryCell: UICollectionViewCell {
             make.edges.equalToSuperview().inset(8)
         }
         
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .white
         label.textAlignment = .center
         
-        contentView.layer.borderWidth = 1
+        contentView.layer.borderWidth = 2
         contentView.layer.borderColor = UIColor.mainPurple.cgColor
         contentView.layer.cornerRadius = 8
     }

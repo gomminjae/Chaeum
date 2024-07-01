@@ -165,10 +165,7 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
             .distinctUntilChanged()
             .bind(onNext: { [weak self] selectedIndexPaths in
                 guard let self = self else { return }
-
                 self.jobCategoryView.reloadData()
-
-
                 for indexPath in selectedIndexPaths {
                     if let cell = self.jobCategoryView.cellForItem(at: indexPath) {
                         cell.backgroundColor = .white
@@ -176,7 +173,6 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
                 }
             })
             .disposed(by: disposeBag)
-        
     }
     
     private func setupStackView() {
@@ -193,7 +189,7 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
             $0.left.right.equalTo(view).inset(20)
         }
         worryView.snp.makeConstraints {
-            $0.height.equalTo(600)
+            $0.height.equalTo(self.view.frame.height)
 
         }
     }
@@ -237,13 +233,13 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
         let layout = UICollectionViewFlowLayout()
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-        layout.minimumInteritemSpacing = 3
+        layout.minimumInteritemSpacing = 1
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.register(JobCategoryCell.self, forCellWithReuseIdentifier: "category")
         view.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "Header")
         view.backgroundColor = .contentColor
         view.layer.cornerRadius = 15
-        view.isScrollEnabled = false 
+        view.isScrollEnabled = false
         return view
     }()
     let worryView = WorryCategoryView()

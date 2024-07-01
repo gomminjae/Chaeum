@@ -27,6 +27,9 @@ target 'Chaeum' do
   pod 'lottie-ios'
   pod 'FSCalendar'
   pod 'TextFieldEffects'
+  
+  #DI
+  pod 'Swinject' 
   # Pods for Chaeum
 
   target 'ChaeumTests' do
