@@ -8,9 +8,9 @@
 import UIKit
 import SnapKit
 import Then
-
+ 
 class BubbleView: UIView {
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white

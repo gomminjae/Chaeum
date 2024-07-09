@@ -9,6 +9,7 @@ import Foundation
 import RxSwift
 
 
+
 protocol WorryUseCase {
     func saveWorry(title: String, content: String, size: Int) -> Observable<Void>
     func fetchAllWorries() -> Observable<[Worry]>
@@ -40,6 +41,4 @@ class WorryUseCaseImpl: WorryUseCase {
         repository.delete(worry: worry)
         return .just(())
     }
-    
-    
 }

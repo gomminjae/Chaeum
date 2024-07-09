@@ -21,15 +21,6 @@ class JobCategoryCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override var isSelected: Bool {
-        didSet {
-            if isSelected {
-                backgroundColor = .subPurple
-            } else {
-                backgroundColor = .contentColor
-            }
-        }
-    }
     
     private func setupUI() {
         contentView.addSubview(label)
@@ -49,7 +40,6 @@ class JobCategoryCell: UICollectionViewCell {
     
     func configure(with text: String) {
         label.text = text
-        contentView.setNeedsLayout()
-        contentView.layoutIfNeeded()
+        self.backgroundColor = self.isSelected ? .subPurple : .contentColor
     }
 }

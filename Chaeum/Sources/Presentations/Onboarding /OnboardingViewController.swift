@@ -24,6 +24,8 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        jobCategoryView.rx.setDelegate(self)
+            .disposed(by: disposeBag)
         if let reactor = jobCategoryReactor {
             bindReactor(reactor: reactor)
         }
@@ -101,80 +103,87 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
     }
     
     override func bindRX() {
-        
-        
-        currentPage
-            .distinctUntilChanged()
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [unowned self] page in
-                let lastPage = stackView.arrangedSubviews.count - 1
-                UIView.animate(withDuration: 0.3) {
-                    self.nextButton.isHidden = page >= lastPage
-                    self.prevButton.isHidden = page <= 0 || page >= lastPage
-                    self.startButton.isHidden = page != lastPage
-                }
-            })
-            .disposed(by: disposeBag)
-
-        
-        currentPage
-            .map { CGFloat($0) / CGFloat(self.segmentedProgressBar.segmentCount)}
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] progress in
-                self?.segmentedProgressBar.progress = progress
-            })
-            .disposed(by: disposeBag)
-        
-       
-        startButton.rx.tap
-            .subscribe(onNext: { [unowned self] in
-                if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
-                   let window = sceneDelegate.window {
-                    self.appCoordinator = AppCoordinator(window)
-                }
-                appCoordinator?.start()
-            })
-            .disposed(by: disposeBag)
-
-    }
-    
-    private func bindReactor(reactor: JobCategoryReactor) {
-
-
-        jobCategoryView.rx.setDelegate(self)
-            .disposed(by: disposeBag)
-        
-        jobCategoryView.rx.itemSelected
-            .map { JobCategoryReactor.Action.selectItem($0) }
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-        
-        jobCategoryView.rx.itemDeselected
-            .map { JobCategoryReactor.Action.deselectItem($0) }
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-
-
-        reactor.state.map { $0.categories }
-            .bind(to: jobCategoryView.rx.items(cellIdentifier: "category", cellType: JobCategoryCell.self)) { (index, model, cell) in
-                cell.configure(with: model)
-            }
-            .disposed(by: disposeBag)
-        
-        reactor.state.map { $0.selectedItems }
-            .distinctUntilChanged()
-            .bind(onNext: { [weak self] selectedIndexPaths in
-                guard let self = self else { return }
-                self.jobCategoryView.reloadData()
-                for indexPath in selectedIndexPaths {
-                    if let cell = self.jobCategoryView.cellForItem(at: indexPath) {
-                        cell.backgroundColor = .white
+            currentPage
+                .distinctUntilChanged()
+                .observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [unowned self] page in
+                    let lastPage = stackView.arrangedSubviews.count - 1
+                    UIView.animate(withDuration: 0.3) {
+                        self.startButton.isHidden = page != lastPage
                     }
+                })
+                .disposed(by: disposeBag)
+
+            currentPage
+                .map { CGFloat($0) / CGFloat(self.segmentedProgressBar.segmentCount) }
+                .observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak self] progress in
+                    self?.segmentedProgressBar.progress = progress
+                })
+                .disposed(by: disposeBag)
+
+            startButton.rx.tap
+                .subscribe(onNext: { [unowned self] in
+                    if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+                       let window = sceneDelegate.window {
+                        self.appCoordinator = AppCoordinator(window)
+                    }
+                    appCoordinator?.start()
+                })
+                .disposed(by: disposeBag)
+        }
+
+        private func bindReactor(reactor: JobCategoryReactor) {
+
+            jobCategoryView.rx.itemSelected
+                .map { JobCategoryReactor.Action.selectItem($0) }
+                .bind(to: reactor.action)
+                .disposed(by: disposeBag)
+
+            jobCategoryView.rx.itemDeselected
+                .map { JobCategoryReactor.Action.deselectItem($0) }
+                .bind(to: reactor.action)
+                .disposed(by: disposeBag)
+
+            reactor.state.map { $0.categories }
+                .bind(to: jobCategoryView.rx.items(cellIdentifier: "category", cellType: JobCategoryCell.self)) { (index, model, cell) in
+                    cell.configure(with: model)
                 }
+                .disposed(by: disposeBag)
+
+            reactor.state.map { Array($0.selectedItems) }
+                .distinctUntilChanged()
+                .observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak self] selectedItems in
+                    guard let self = self else { return }
+                    self.jobCategoryView.reloadData()
+                    DispatchQueue.main.async {
+                        self.updateSelectedCells(selectedItems)
+                    }
+                })
+                .disposed(by: disposeBag)
+        }
+
+        private func updateSelectedCells(_ selectedItems: [IndexPath]) {
+            let allIndexPaths = Set((0..<jobCategoryView.numberOfSections).flatMap { section in
+                (0..<jobCategoryView.numberOfItems(inSection: section)).map { IndexPath(item: $0, section: section) }
             })
-            .disposed(by: disposeBag)
-    }
-    
+
+            let selectedIndexPaths = Set(selectedItems)
+            let unselectedIndexPaths = allIndexPaths.subtracting(selectedIndexPaths)
+
+            selectedIndexPaths.forEach { indexPath in
+                if let cell = jobCategoryView.cellForItem(at: indexPath) as? JobCategoryCell {
+                    cell.isSelected = true
+                }
+            }
+
+            unselectedIndexPaths.forEach { indexPath in
+                if let cell = jobCategoryView.cellForItem(at: indexPath) as? JobCategoryCell {
+                    cell.isSelected = false
+                }
+            }
+        }
     private func setupStackView() {
        
         stackView.addArrangedSubview(nameView)
@@ -240,6 +249,7 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
         view.backgroundColor = .contentColor
         view.layer.cornerRadius = 15
         view.isScrollEnabled = false
+        view.allowsMultipleSelection = true
         return view
     }()
     let worryView = WorryCategoryView()

@@ -32,10 +32,11 @@ class JobCategoryReactor: Reactor {
 
     init(repository: JobCategoryRepository) {
         self.repository = repository
-        self.initialState = State(categories: [], selectedItems: [])
+        self.initialState = State(categories: [], selectedItems: Set<IndexPath>())
         self.action.onNext(.fetchCategories)
     }
 
+    
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .fetchCategories:
@@ -43,15 +44,14 @@ class JobCategoryReactor: Reactor {
                 .map { Mutation.updateCategories($0) }
         case let .selectItem(indexPath):
             var selectedItems = currentState.selectedItems
-            selectedItems.insert(indexPath)
+            selectedItems.insert(indexPath)  // Use 'insert' for Set
             return Observable.just(.updateSelectedItems(selectedItems))
         case let .deselectItem(indexPath):
             var selectedItems = currentState.selectedItems
-            selectedItems.remove(indexPath)
+            selectedItems.remove(indexPath)  // Use 'remove' for Set
             return Observable.just(.updateSelectedItems(selectedItems))
         }
     }
-
     func reduce(state: State, mutation: Mutation) -> State {
         var newState = state
         switch mutation {

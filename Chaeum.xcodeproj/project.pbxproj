@@ -62,6 +62,8 @@
 		B581F56D2C33027B00A38D8C /* WorryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F56C2C33027B00A38D8C /* WorryRepository.swift */; };
 		B581F56F2C33035900A38D8C /* WorryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F56E2C33035900A38D8C /* WorryUseCase.swift */; };
 		B581F5712C33042700A38D8C /* WorryListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5702C33042700A38D8C /* WorryListReactor.swift */; };
+		B581F5732C37D52500A38D8C /* BreathReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5722C37D52500A38D8C /* BreathReactor.swift */; };
+		B581F5752C3D6E0400A38D8C /* AddWorryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5742C3D6E0400A38D8C /* AddWorryViewController.swift */; };
 		B7DEE849A8285F47AFFD23BF /* Pods_Chaeum_ChaeumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +149,8 @@
 		B581F56C2C33027B00A38D8C /* WorryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorryRepository.swift; sourceTree = "<group>"; };
 		B581F56E2C33035900A38D8C /* WorryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorryUseCase.swift; sourceTree = "<group>"; };
 		B581F5702C33042700A38D8C /* WorryListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorryListReactor.swift; sourceTree = "<group>"; };
+		B581F5722C37D52500A38D8C /* BreathReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathReactor.swift; sourceTree = "<group>"; };
+		B581F5742C3D6E0400A38D8C /* AddWorryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorryViewController.swift; sourceTree = "<group>"; };
 		C7F857F5F1A8645FE45278FE /* Pods_Chaeum_ChaeumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chaeum_ChaeumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAAF5BAEA8927A43B2BB858D /* Pods-ChaeumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChaeumTests.debug.xcconfig"; path = "Target Support Files/Pods-ChaeumTests/Pods-ChaeumTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -429,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				B524D4772C0B586000BCA70E /* BreathViewController.swift */,
+				B581F5722C37D52500A38D8C /* BreathReactor.swift */,
 			);
 			path = Breath;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				B581F55B2C2D9D1700A38D8C /* Reactors */,
 				B581F55A2C2D9BB600A38D8C /* Cells */,
 				B581F53E2C0EBF3900A38D8C /* Views */,
+				B581F5742C3D6E0400A38D8C /* AddWorryViewController.swift */,
 				B581F5212C0D76E300A38D8C /* OnboardingViewController.swift */,
 			);
 			path = "Onboarding ";
@@ -784,6 +790,7 @@
 				B500B9D12BF345B60045A2D5 /* SettingViewController.swift in Sources */,
 				B500B9B12BF0A40C0045A2D5 /* TabbarController.swift in Sources */,
 				B517EB952BEB11E500C8A942 /* AppDelegate.swift in Sources */,
+				B581F5752C3D6E0400A38D8C /* AddWorryViewController.swift in Sources */,
 				B581F5692C32FBB600A38D8C /* Todo.swift in Sources */,
 				B524D4512C059A9900BCA70E /* DesignSystemIcon.swift in Sources */,
 				B524D4782C0B586000BCA70E /* BreathViewController.swift in Sources */,
@@ -817,6 +824,7 @@
 				B581F5192C0C4C9D00A38D8C /* ScheduleRepository.swift in Sources */,
 				B524D4552C05A6FE00BCA70E /* ScheduleUseCase .swift in Sources */,
 				B581F5612C3278D400A38D8C /* JobCategoryRepository.swift in Sources */,
+				B581F5732C37D52500A38D8C /* BreathReactor.swift in Sources */,
 				B524D4532C05A6AC00BCA70E /* Schedule.swift in Sources */,
 				B581F5672C32FB8900A38D8C /* Worry.swift in Sources */,
 				B581F5222C0D76E300A38D8C /* OnboardingViewController.swift in Sources */,

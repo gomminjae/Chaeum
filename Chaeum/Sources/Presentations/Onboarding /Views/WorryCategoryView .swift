@@ -7,58 +7,34 @@
 import UIKit
 import SnapKit
 import Then
+import CoreMotion
 
 
 class WorryCategoryView: UIView {
     
     var worries: [BubbleView] = []
-    var gravity: Gravity?
-    var gravityItems: [UIDynamicItem] = []
+    private var gravity: UIGravityBehavior?
+    private var collision: UICollisionBehavior?
+    private var animator: UIDynamicAnimator?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .clear
         setupView()
-        setupBubbles()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupBubbles() {
-        // Add this guard statement to avoid issues if the frame size is too small
-        guard self.worryBox.frame.size.width > 100 && self.worryBox.frame.size.height > 100 else {
-            print("Error: worryBox frame size is too small to fit bubbles.")
-            return
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if worries.isEmpty {
+            setupBubbles()
         }
-        
-        for _ in 0..<6 {
-            let randX = Int.random(in: 0..<Int(self.worryBox.frame.size.width - 100))
-            let randY = Int.random(in: 0..<Int(self.worryBox.frame.size.height - 100))
-            
-            let bubble = BubbleView(
-                frame: CGRect(x: randX, y: randY, width: 60, height: 60)
-            )
-            self.worryBox.addSubview(bubble)
-        }
-        
-        // prepare the bubbles to pass to SDK
-        gravityItems = self.worryBox.subviews.filter{ $0 is BubbleView }
-        
-        gravity = Gravity(
-            gravityItems: gravityItems, // <<-- your bubbles
-            collisionItems: nil,
-            referenceView: self.worryBox,
-            boundary: UIBezierPath(rect: self.worryBox.bounds), // Use bounds instead of frame for accurate collision boundary
-            queue: nil
-        )
-        
-        // start gravity
-        gravity?.enable()
     }
     
-    func setupView() {
+    private func setupView() {
         addSubview(titleLabel)
         addSubview(addButton)
         addSubview(worryBox)
@@ -76,19 +52,46 @@ class WorryCategoryView: UIView {
         }
         
         addButton.snp.makeConstraints {
-            $0.top.equalTo(worryBox.snp.bottom).offset(20) // Adjusted to avoid overlap
+            $0.top.equalTo(worryBox.snp.bottom).offset(20)
             $0.width.height.equalTo(60)
             $0.centerX.equalTo(self)
         }
-        
-        // Ensure that layout constraints are applied
-     
     }
     
+    private func setupBubbles() {
+        
+        animator = UIDynamicAnimator(referenceView: self.worryBox)
+        
+       
+        gravity = UIGravityBehavior()
+        gravity?.gravityDirection = CGVector(dx: 0, dy: 1) // Gravity direction
+        animator?.addBehavior(gravity!)
+        
 
-
+        collision = UICollisionBehavior()
+        collision?.translatesReferenceBoundsIntoBoundary = true // Set the boundaries of the view
+        animator?.addBehavior(collision!)
+        
+       
+        for _ in 0..<15 {
+            let randX = Int.random(in: 0..<Int(self.worryBox.frame.size.width - 60))
+            let randY = Int.random(in: 0..<Int(self.worryBox.frame.size.height - 60))
+            
+            let bubble = BubbleView(
+                frame: CGRect(x: randX, y: randY, width: 100, height: 100)
+            )
+            bubble.backgroundColor = .mainPurple
+            self.worryBox.addSubview(bubble)
+            worries.append(bubble)
+            
+            
+            gravity?.addItem(bubble)
+            collision?.addItem(bubble)
+        }
+    }
     
-    //MARK: UI
+    // MARK: UI Elements
+    
     lazy var titleLabel = UILabel().then {
         $0.text = "당신은 어떤 걱정을 하고 있나요?"
         $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
