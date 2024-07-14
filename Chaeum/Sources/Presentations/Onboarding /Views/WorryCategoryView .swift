@@ -91,7 +91,6 @@ class WorryCategoryView: UIView {
     }
     
     // MARK: UI Elements
-    
     lazy var titleLabel = UILabel().then {
         $0.text = "당신은 어떤 걱정을 하고 있나요?"
         $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)

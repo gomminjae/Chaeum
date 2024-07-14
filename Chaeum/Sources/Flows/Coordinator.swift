@@ -22,26 +22,35 @@ class AppCoordinator: Coordinator {
     init(_ window: UIWindow?) {
         self.window = window
         window?.makeKeyAndVisible()
-        start()
     }
     
     func start() {
-        
-        if UserDefaults.standard.bool(forKey: "userInfo") {
-            let homeNavigationController = UINavigationController()
-            let homeCoordinator = HomeCoordinator(navigationController: homeNavigationController)
-            
-            let tabBarController = TabBarController(homeCoordinator: homeCoordinator)
-            
-            window?.rootViewController = tabBarController
+        let userDefaults = UserDefaults.standard
+        if userDefaults.bool(forKey: "isUserLoggedIn") {
+            showHome()
+            print("Home")
         } else {
-            let onboardingController = UINavigationController()
-            let onboardingCoordinator = OnboardingCoordinator(navigationController: onboardingController)
-            let onboardingVC = OnboardingViewController()
-            window?.rootViewController = onboardingVC
+            showOnboarding()
+            print("Onboarding")
         }
-        
-        
-
+    }
+    private func showHome() {
+        let homeNavigationController = UINavigationController()
+        let homeCoordinator = HomeCoordinator(navigationController: homeNavigationController)
+        homeCoordinator.parentCoordinator = self
+        children.append(homeCoordinator)
+        homeCoordinator.start()
+        window?.rootViewController = homeNavigationController
+        window?.makeKeyAndVisible()
+    }
+    
+    private func showOnboarding() {
+        let onboardingNavigationController = UINavigationController()
+        let onboardingCoordinator = OnboardingCoordinator(navigationController: onboardingNavigationController)
+        onboardingCoordinator.parentCoordinator = self
+        children.append(onboardingCoordinator)
+        onboardingCoordinator.start()
+        window?.rootViewController = onboardingNavigationController
+        window?.makeKeyAndVisible()
     }
 }

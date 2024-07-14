@@ -27,7 +27,8 @@ class OnboardingCoordinator: Coordinator {
     
     func presentWorry() {
         let addWorry = AddWorryViewController()
-        navigationController.pushViewController(addWorry, animated: true)
+        addWorry.modalPresentationStyle = .overFullScreen
+        navigationController.present(addWorry, animated: true)
     }
     
     

@@ -17,7 +17,6 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
     var coordinator: OnboardingCoordinator?
     
     private let disposeBag = DisposeBag()
-    private let currentPage = BehaviorRelay<Int>(value: 0)
     
     private var jobCategoryReactor: JobCategoryReactor?
     
@@ -51,9 +50,6 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
     override func setupViews() {
         view.addSubview(scrollView)
         scrollView.addSubview(stackView)
-        //        view.addSubview(nextButton)
-        //        view.addSubview(prevButton)
-        view.addSubview(startButton)
         view.addSubview(segmentedProgressBar)
         
         segmentedProgressBar.progress = 0.6
@@ -81,48 +77,18 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
             $0.height.equalTo(20)
             
         }
-        //
-        //        nextButton.snp.makeConstraints {
-        //            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(20)
-        //            $0.width.equalTo(100)
-        //            $0.height.equalTo(70)
-        //            $0.trailing.equalTo(view.snp.centerX).offset(-10)
-        //        }
-        
-        //        prevButton.snp.makeConstraints {
-        //            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(20)
-        //            $0.width.equalTo(100)
-        //            $0.height.equalTo(70)
-        //            $0.leading.equalTo(view.snp.centerX).offset(10)
-        //        }
-        //
-        startButton.snp.makeConstraints {
-            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(20)
-            $0.centerX.equalTo(view)
-            $0.width.equalTo(200)
-            $0.height.equalTo(70)
-        }
     }
     
     override func bindRX() {
-        currentPage
-            .distinctUntilChanged()
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [unowned self] page in
-                let lastPage = stackView.arrangedSubviews.count - 1
-                UIView.animate(withDuration: 0.3) {
-                    self.startButton.isHidden = page != lastPage
-                }
-            })
-            .disposed(by: disposeBag)
         
-        currentPage
-            .map { CGFloat($0) / CGFloat(self.segmentedProgressBar.segmentCount) }
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] progress in
-                self?.segmentedProgressBar.progress = progress
-            })
-            .disposed(by: disposeBag)
+        if let worryView = stackView.arrangedSubviews.first(where: { $0 is WorryCategoryView }) as? WorryCategoryView {
+            worryView.addButton.rx.tap
+                .subscribe(onNext: { [weak self] in
+                    self?.coordinator?.presentWorry()
+                    print("Button tapped")
+                })
+                .disposed(by: disposeBag)
+        }
     }
     
     private func bindReactor(reactor: JobCategoryReactor) {
@@ -181,6 +147,7 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
         stackView.addArrangedSubview(nameView)
         stackView.addArrangedSubview(jobCategoryView)
         stackView.addArrangedSubview(worryView)
+        stackView.addArrangedSubview(UIButton())
         
         nameView.snp.makeConstraints {
             $0.height.equalTo(300)
@@ -210,18 +177,6 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
         $0.spacing = 0
     }
     
-    lazy var nextButton = UIButton().then {
-        $0.backgroundColor = .blue
-        $0.setTitle("Next", for: .normal)
-        $0.addTarget(self, action: #selector(nextTapped), for: .touchUpInside)
-    }
-    
-    lazy var prevButton = UIButton().then {
-        $0.backgroundColor = .gray
-        $0.setTitle("Prev", for: .normal)
-        $0.addTarget(self, action: #selector(prevTapped), for: .touchUpInside)
-    }
-    
     lazy var startButton = UIButton().then {
         $0.backgroundColor = .green
         $0.setTitle("시작하기", for: .normal)
@@ -246,44 +201,9 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
     }()
     let worryView = WorryCategoryView()
     
-    @objc func nextTapped(_ sender: UIButton) {
-        let pageHeight = scrollView.frame.size.height
-        let maxHeight = pageHeight * CGFloat(stackView.arrangedSubviews.count)
-        let currentOffset = scrollView.contentOffset.y
-        let newOffset = min(currentOffset + pageHeight, maxHeight - pageHeight)
-        
-        scrollView.setContentOffset(CGPoint(x: 0, y: newOffset), animated: true)
-        let newPage = min(currentPage.value + 1, stackView.arrangedSubviews.count - 1)
-        currentPage.accept(newPage)
-    }
-    
-    @objc func prevTapped(_ sender: UIButton) {
-        let pageHeight = scrollView.frame.size.height
-        let currentOffset = scrollView.contentOffset.y
-        let newOffset = max(currentOffset - pageHeight, 0)
-        
-        scrollView.setContentOffset(CGPoint(x: 0, y: newOffset), animated: true)
-        let newPage = max(currentPage.value - 1, 0)
-        currentPage.accept(newPage)
-    }
-    
-    // UITextFieldDelegate 메서드
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        nextTapped(nextButton)
-        return true
-    }
+
 }
 
-// UIScrollViewDelegate 메서드
-extension OnboardingViewController: UIScrollViewDelegate {
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let pageHeight = scrollView.frame.size.height
-        let currentPageDouble = scrollView.contentOffset.y / pageHeight
-        let currentPage = Int(currentPageDouble)
-        self.currentPage.accept(currentPage)
-    }
-}
 
 extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
