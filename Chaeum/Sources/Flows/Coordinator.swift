@@ -26,11 +26,22 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let homeNavigationController = UINavigationController()
-        let homeCoordinator = HomeCoordinator(navigationController: homeNavigationController)
         
-        let tabBarController = TabBarController(homeCoordinator: homeCoordinator)
+        if UserDefaults.standard.bool(forKey: "userInfo") {
+            let homeNavigationController = UINavigationController()
+            let homeCoordinator = HomeCoordinator(navigationController: homeNavigationController)
+            
+            let tabBarController = TabBarController(homeCoordinator: homeCoordinator)
+            
+            window?.rootViewController = tabBarController
+        } else {
+            let onboardingController = UINavigationController()
+            let onboardingCoordinator = OnboardingCoordinator(navigationController: onboardingController)
+            let onboardingVC = OnboardingViewController()
+            window?.rootViewController = onboardingVC
+        }
         
-        window?.rootViewController = tabBarController
+        
+
     }
 }
