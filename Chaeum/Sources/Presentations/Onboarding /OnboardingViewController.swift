@@ -21,7 +21,7 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
     private var jobCategoryReactor: JobCategoryReactor?
     
     
-    let segmentedProgressBar = SegmentedProgressBar()
+    //let segmentedProgressBar = SegmentedProgressBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,9 +50,6 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
     override func setupViews() {
         view.addSubview(scrollView)
         scrollView.addSubview(stackView)
-        view.addSubview(segmentedProgressBar)
-        
-        segmentedProgressBar.progress = 0.6
         setupStackView()
         
         
@@ -70,25 +67,16 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
             $0.width.equalTo(scrollView)
         }
         
-        segmentedProgressBar.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.top.equalTo(view.safeAreaLayoutGuide).inset(40)
-            $0.width.equalTo(300)
-            $0.height.equalTo(20)
-            
-        }
     }
     
     override func bindRX() {
         
-        if let worryView = stackView.arrangedSubviews.first(where: { $0 is WorryCategoryView }) as? WorryCategoryView {
-            worryView.addButton.rx.tap
-                .subscribe(onNext: { [weak self] in
-                    self?.coordinator?.presentWorry()
-                    print("Button tapped")
-                })
-                .disposed(by: disposeBag)
-        }
+        worryView.addButton.rx.tap
+                   .subscribe(onNext: { [weak self] in
+                       self?.coordinator?.presentWorry()
+                       print("Button tapped")
+                   })
+                   .disposed(by: disposeBag)
     }
     
     private func bindReactor(reactor: JobCategoryReactor) {
