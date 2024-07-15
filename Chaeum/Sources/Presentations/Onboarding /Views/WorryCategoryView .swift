@@ -8,7 +8,7 @@ import UIKit
 import SnapKit
 import Then
 import CoreMotion
-
+import RxSwift
 
 class WorryCategoryView: UIView {
     
@@ -21,6 +21,8 @@ class WorryCategoryView: UIView {
         super.init(frame: frame)
         self.backgroundColor = .clear
         setupView()
+        bindActions()
+        
     }
     
     required init?(coder: NSCoder) {
@@ -106,4 +108,18 @@ class WorryCategoryView: UIView {
         $0.backgroundColor = .contentColor
         $0.layer.cornerRadius = 15
     }
+    private func bindActions() {
+           addButton.rx.tap
+               .subscribe(onNext: { [weak self] in
+                   self?.handleAddButtonTap()  // 액션 처리 메소드 호출
+               })
+               .disposed(by: disposeBag)
+       }
+       
+       private func handleAddButtonTap() {
+           print("Add Button Tapped")
+           // 버튼 클릭 시의 동작을 구현합니다.
+       }
+       
+       private let disposeBag = DisposeBag()
 }

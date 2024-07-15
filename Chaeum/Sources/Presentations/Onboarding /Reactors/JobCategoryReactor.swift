@@ -44,7 +44,8 @@ class JobCategoryReactor: Reactor {
                 .map { Mutation.updateCategories($0) }
         case let .selectItem(indexPath):
             var selectedItems = currentState.selectedItems
-            selectedItems.insert(indexPath)  // Use 'insert' for Set
+            selectedItems.insert(indexPath)
+            print("Selected")
             return Observable.just(.updateSelectedItems(selectedItems))
         case let .deselectItem(indexPath):
             var selectedItems = currentState.selectedItems

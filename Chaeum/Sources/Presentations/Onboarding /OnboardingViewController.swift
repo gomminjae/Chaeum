@@ -73,7 +73,8 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
         
         worryView.addButton.rx.tap
                    .subscribe(onNext: { [weak self] in
-                       self?.coordinator?.presentWorry()
+                       //self?.coordinator?.presentWorry()
+                       self?.present(AddWorryViewController(), animated: true)
                        print("Button tapped")
                    })
                    .disposed(by: disposeBag)
