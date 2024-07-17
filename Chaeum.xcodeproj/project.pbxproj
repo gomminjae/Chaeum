@@ -34,6 +34,7 @@
 		B524D45A2C060FC100BCA70E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4592C060FC100BCA70E /* BaseViewController.swift */; };
 		B524D45E2C09A92F00BCA70E /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D45D2C09A92F00BCA70E /* UserDefault.swift */; };
 		B524D4782C0B586000BCA70E /* BreathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B524D4772C0B586000BCA70E /* BreathViewController.swift */; };
+		B53C04E92C46BDF900A44DEF /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53C04E82C46BDF900A44DEF /* CompleteView.swift */; };
 		B54EAD542C0B66AB00618512 /* Pods_Chaeum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9D34D562D92B2E98A09B1F /* Pods_Chaeum.framework */; };
 		B581F5142C0C30BD00A38D8C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5132C0C30BD00A38D8C /* Theme.swift */; };
 		B581F5162C0C312600A38D8C /* ComponentAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B581F5152C0C312600A38D8C /* ComponentAsset.swift */; };
@@ -122,6 +123,7 @@
 		B524D4592C060FC100BCA70E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B524D45D2C09A92F00BCA70E /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		B524D4772C0B586000BCA70E /* BreathViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathViewController.swift; sourceTree = "<group>"; };
+		B53C04E82C46BDF900A44DEF /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
 		B581F5132C0C30BD00A38D8C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B581F5152C0C312600A38D8C /* ComponentAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentAsset.swift; sourceTree = "<group>"; };
 		B581F5182C0C4C9D00A38D8C /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 				B581F5412C0ED54B00A38D8C /* NameView.swift */,
 				B581F5472C0ED57700A38D8C /* WorryCategoryView .swift */,
 				B581F5642C32D1B900A38D8C /* BubbleView.swift */,
+				B53C04E82C46BDF900A44DEF /* CompleteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -780,6 +783,7 @@
 			files = (
 				B581F5712C33042700A38D8C /* WorryListReactor.swift in Sources */,
 				B581F5402C0EBF4300A38D8C /* HeaderView .swift in Sources */,
+				B53C04E92C46BDF900A44DEF /* CompleteView.swift in Sources */,
 				B581F5162C0C312600A38D8C /* ComponentAsset.swift in Sources */,
 				B524D4582C05A77200BCA70E /* ViewModelType.swift in Sources */,
 				B581F54E2C1BDCEC00A38D8C /* OnboardingUseCase .swift in Sources */,

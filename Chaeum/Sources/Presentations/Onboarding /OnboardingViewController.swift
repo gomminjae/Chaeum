@@ -78,6 +78,11 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
                        print("Button tapped")
                    })
                    .disposed(by: disposeBag)
+        completeView.completeButton.rx.tap
+            .subscribe(onNext: { [weak self] in
+                print("Hello")
+            })
+            .disposed(by: disposeBag)
     }
     
     private func bindReactor(reactor: JobCategoryReactor) {
@@ -132,22 +137,24 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
         }
     }
     private func setupStackView() {
-        
         stackView.addArrangedSubview(nameView)
         stackView.addArrangedSubview(jobCategoryView)
         stackView.addArrangedSubview(worryView)
-        stackView.addArrangedSubview(UIButton())
+        stackView.addArrangedSubview(completeView)
         
         nameView.snp.makeConstraints {
             $0.height.equalTo(300)
         }
         jobCategoryView.snp.makeConstraints {
-            $0.height.equalTo(200)
+            $0.height.equalTo(250)
             $0.left.right.equalTo(view).inset(20)
         }
         worryView.snp.makeConstraints {
             $0.height.equalTo(self.view.frame.height)
             
+        }
+        completeView.snp.makeConstraints {
+            $0.height.equalTo(80)
         }
     }
     
@@ -172,6 +179,7 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
         $0.isHidden = true
     }
     
+    
     let headerView = HeaderView()
     let nameView = NameView()
     lazy var jobCategoryView: UICollectionView = {
@@ -189,6 +197,7 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
         return view
     }()
     let worryView = WorryCategoryView()
+        let completeView = CompleteView()
     
 
 }

@@ -21,7 +21,7 @@ class WorryCategoryView: UIView {
         super.init(frame: frame)
         self.backgroundColor = .clear
         setupView()
-        bindActions()
+        
         
     }
     
@@ -38,8 +38,9 @@ class WorryCategoryView: UIView {
     
     private func setupView() {
         addSubview(titleLabel)
-        addSubview(addButton)
         addSubview(worryBox)
+        addSubview(addButton)
+        
         
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(self).inset(20)
@@ -107,19 +108,7 @@ class WorryCategoryView: UIView {
     lazy var worryBox = UIView().then {
         $0.backgroundColor = .contentColor
         $0.layer.cornerRadius = 15
-    }
-    private func bindActions() {
-           addButton.rx.tap
-               .subscribe(onNext: { [weak self] in
-                   self?.handleAddButtonTap()  // 액션 처리 메소드 호출
-               })
-               .disposed(by: disposeBag)
-       }
+   
        
-       private func handleAddButtonTap() {
-           print("Add Button Tapped")
-           // 버튼 클릭 시의 동작을 구현합니다.
-       }
        
-       private let disposeBag = DisposeBag()
 }

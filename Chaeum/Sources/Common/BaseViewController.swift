@@ -14,8 +14,6 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 0.09, green: 0.09, blue: 0.12, alpha: 1.00)
         setupViews()
-    
-
         setupConstraints()
         bindRX()
 
