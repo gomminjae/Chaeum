@@ -18,7 +18,7 @@ target 'Chaeum' do
 
   #Storage
   pod 'RealmSwift'
-
+  pod 'RxRealm'
   #Archi
   pod 'ReactorKit'
 

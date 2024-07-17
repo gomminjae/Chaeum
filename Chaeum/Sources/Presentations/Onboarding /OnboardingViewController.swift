@@ -12,8 +12,7 @@ import SnapKit
 import Then
 
 class OnboardingViewController: BaseViewController, UITextFieldDelegate {
-    
-    
+
     var coordinator: OnboardingCoordinator?
     
     private let disposeBag = DisposeBag()
@@ -80,7 +79,7 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
                    .disposed(by: disposeBag)
         completeView.completeButton.rx.tap
             .subscribe(onNext: { [weak self] in
-                print("Hello")
+                self?.present(AddWorryViewController(), animated: true)
             })
             .disposed(by: disposeBag)
     }
@@ -146,11 +145,11 @@ class OnboardingViewController: BaseViewController, UITextFieldDelegate {
             $0.height.equalTo(300)
         }
         jobCategoryView.snp.makeConstraints {
-            $0.height.equalTo(250)
+            $0.height.equalTo(200)
             $0.left.right.equalTo(view).inset(20)
         }
         worryView.snp.makeConstraints {
-            $0.height.equalTo(self.view.frame.height)
+            $0.height.equalTo(1000)
             
         }
         completeView.snp.makeConstraints {

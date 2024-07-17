@@ -8,6 +8,9 @@
 import UIKit
 import RxSwift
 import SnapKit
+import Then
+import Realm
+import RxRealm
 
 class AddWorryViewController: BaseViewController {
     
@@ -15,37 +18,50 @@ class AddWorryViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        baseView.backgroundColor = .white
+
         
 
         
     }
     
     override func setupViews() {
-        view.addSubview(titleLabel)
-        view.addSubview(textField)
-        view.addSubview(addButton)
+        view.addSubview(baseView)
+        baseView.addSubview(titleLabel)
+        baseView.addSubview(textField)
+        baseView.addSubview(addButton)
+        baseView.addSubview(exitButton)
     }
     
     override func setupConstraints() {
+        
+        baseView.snp.makeConstraints {
+            $0.centerX.equalTo(view)
+            $0.leading.equalTo(view).inset(40)
+            $0.trailing.equalTo(view).inset(40)
+            $0.centerY.equalTo(view)
+        }
+        
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).inset(20)
-            $0.leading.trailing.equalTo(view).inset(20)
+            $0.top.equalTo(baseView).inset(20)
+            $0.leading.trailing.equalTo(baseView).inset(20)
             $0.height.equalTo(40)
         }
         
         textField.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(20)
-            $0.leading.trailing.equalTo(view).inset(20)
+            $0.leading.trailing.equalTo(baseView).inset(20)
             $0.height.equalTo(40)
         }
         
         addButton.snp.makeConstraints {
             $0.top.equalTo(textField.snp.bottom).offset(20)
             $0.width.height.equalTo(60)
-            $0.centerX.equalTo(view)
+            $0.centerX.equalTo(baseView)
         }
         
     }
+    
     
     override func bindRX() {
         let combinedTextFields = Observable.combineLatest(
@@ -68,6 +84,10 @@ class AddWorryViewController: BaseViewController {
                 self?.dismiss(animated: true, completion: nil)
             })
             .disposed(by: disposeBag)
+    }
+    
+    lazy var baseView = UIView().then {
+        $0.backgroundColor = .black
     }
     
     
@@ -111,6 +131,9 @@ class AddWorryViewController: BaseViewController {
         $0.backgroundColor = .blue
         $0.setTitle("추가", for: .normal)
         $0.layer.cornerRadius = 30
+    }
+    lazy var exitButton = UIButton().then {
+        $0.backgroundColor = .subPurple
     }
     
     

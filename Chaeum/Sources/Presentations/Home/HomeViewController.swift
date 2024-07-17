@@ -39,6 +39,7 @@ class HomeViewController: BaseViewController {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalTo(view)
             $0.bottom.equalTo(view.safeAreaLayoutGuide)
+            
         }
         
     }

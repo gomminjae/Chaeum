@@ -7,6 +7,7 @@
 
 import Foundation
 import RealmSwift
+import RxSwift
 
 
 
@@ -14,8 +15,7 @@ class Worry: Object {
     @Persisted var title: String
     @Persisted var content: String
     @Persisted var size: Int
-    
-    convenience init(title: String, content: String, size: Int) {
+    convenience init(title: String, content: String, size: Int){
         self.init()
         self.title = title
         self.content = content

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import SnapKit
 
 class TabBarController: UITabBarController {
 
@@ -34,7 +36,10 @@ class TabBarController: UITabBarController {
 
         let testViewController = TestViewController()
         testViewController.title = "Test"
+        
+        let settingViewController = SettingViewController()
+        settingViewController.title = "Setting"
 
-        self.viewControllers = [homeNavigationController, testViewController]
+        self.viewControllers = [homeNavigationController, testViewController, settingViewController]
     }
 }

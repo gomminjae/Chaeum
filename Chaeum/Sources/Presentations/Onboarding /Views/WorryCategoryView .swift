@@ -108,6 +108,7 @@ class WorryCategoryView: UIView {
     lazy var worryBox = UIView().then {
         $0.backgroundColor = .contentColor
         $0.layer.cornerRadius = 15
+    }
    
        
        
