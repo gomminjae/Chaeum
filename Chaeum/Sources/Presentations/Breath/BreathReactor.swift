@@ -26,6 +26,9 @@ class BreathReactor: Reactor {
     
     let  initialState: State = State()
     
+    //Breath Reactor standard initialize from ReactorKit
+    
+    
     
     
     

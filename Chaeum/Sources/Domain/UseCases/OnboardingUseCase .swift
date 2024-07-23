@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import RxSwift
+
+
+//protocol OnboardingUseCase {
+//    
+//}
+//
+//class OnboardingUseCaseImpl {
+//    
+//    private let repository:
+//}

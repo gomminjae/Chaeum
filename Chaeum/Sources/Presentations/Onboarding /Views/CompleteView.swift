@@ -15,8 +15,7 @@ class CompleteView: UIView {
         super.init(frame: frame)
         addSubview(completeButton)
         
-        
-        
+
         
         completeButton.snp.makeConstraints {
             $0.width.equalTo(self.frame.width - 60)
@@ -24,7 +23,7 @@ class CompleteView: UIView {
             $0.trailing.equalTo(self).inset(30)
             $0.height.equalTo(70)
         }
-    }
+    } 
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -35,7 +34,13 @@ class CompleteView: UIView {
         $0.text = "Complete"
     }
     
+    
     lazy var completeButton = UIButton().then {
         $0.backgroundColor = .mainPink
+        $0.titleLabel?.text = "Complete"
+        $0.tintColor = .black
     }
+    
+    
+    
 }

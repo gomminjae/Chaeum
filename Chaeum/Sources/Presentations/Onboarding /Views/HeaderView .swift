@@ -15,7 +15,7 @@ class HeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .contentColor
+        self.backgroundColor = .subPurple
         
         
         addSubview(headerImage)
@@ -31,6 +31,7 @@ class HeaderView: UIView {
             $0.bottom.equalTo(self)
         }
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

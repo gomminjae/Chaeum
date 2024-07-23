@@ -18,17 +18,17 @@ class AddWorryViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        baseView.backgroundColor = .white
-
-        
-
-        
+        view.backgroundColor = .clear
+        setupViews() // setupViews 호출
+        setupConstraints() // setupConstraints 호출
     }
     
     override func setupViews() {
         view.addSubview(baseView)
         baseView.addSubview(titleLabel)
         baseView.addSubview(textField)
+        baseView.addSubview(contentField)
+        baseView.addSubview(sizeField)
         baseView.addSubview(addButton)
         baseView.addSubview(exitButton)
     }
@@ -54,14 +54,25 @@ class AddWorryViewController: BaseViewController {
             $0.height.equalTo(40)
         }
         
-        addButton.snp.makeConstraints {
+        contentField.snp.makeConstraints {
             $0.top.equalTo(textField.snp.bottom).offset(20)
+            $0.leading.trailing.equalTo(baseView).inset(20)
+            $0.height.equalTo(40)
+        }
+        
+        sizeField.snp.makeConstraints {
+            $0.top.equalTo(contentField.snp.bottom).offset(20)
+            $0.leading.trailing.equalTo(baseView).inset(20)
+            $0.height.equalTo(40)
+        }
+        
+        addButton.snp.makeConstraints {
+            $0.top.equalTo(sizeField.snp.bottom).offset(20)
             $0.width.height.equalTo(60)
             $0.centerX.equalTo(baseView)
         }
         
     }
-    
     
     override func bindRX() {
         let combinedTextFields = Observable.combineLatest(
@@ -71,13 +82,12 @@ class AddWorryViewController: BaseViewController {
         )
         let transform = combinedTextFields
             .map { title, content, size in
-                (title,content,Int(size) ?? 60)
+                (title, content, Int(size) ?? 60)
             }
         let validInput = transform
             .filter { title, content, size in
                 !title.isEmpty && !content.isEmpty && size > 0
             }
-    
         
         addButton.rx.tap
             .subscribe(onNext: { [weak self] in
@@ -87,26 +97,11 @@ class AddWorryViewController: BaseViewController {
     }
     
     lazy var baseView = UIView().then {
-        $0.backgroundColor = .black
+        $0.backgroundColor = .subPurple
     }
-    
     
     lazy var titleLabel = UILabel().then {
         $0.text = "새 걱정 추가"
-        $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        $0.textColor = .black
-        $0.textAlignment = .center
-    }
-    
-    lazy var contentLabel = UILabel().then {
-        $0.text = "내용"
-        $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        $0.textColor = .black
-        $0.textAlignment = .center
-    }
-    
-    lazy var sizeLabel = UILabel().then {
-        $0.text = "사이즈"
         $0.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         $0.textColor = .black
         $0.textAlignment = .center
@@ -132,11 +127,8 @@ class AddWorryViewController: BaseViewController {
         $0.setTitle("추가", for: .normal)
         $0.layer.cornerRadius = 30
     }
+    
     lazy var exitButton = UIButton().then {
         $0.backgroundColor = .subPurple
     }
-    
-    
-    
-
 }

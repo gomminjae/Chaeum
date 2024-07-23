@@ -15,7 +15,6 @@ protocol ScheduleListUseCase {
     func delete(schedule: Schedule) -> Observable<Void>
 }
 
-
 class ScheduleListUseCaseImpl: ScheduleListUseCase {
     
     private let repository: ScheduleRepository
@@ -37,4 +36,6 @@ class ScheduleListUseCaseImpl: ScheduleListUseCase {
     func delete(schedule: Schedule) -> Observable<Void> {
         return repository.deleteSchedule(schedule)
     }
+    
 }
+
