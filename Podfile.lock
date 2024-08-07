@@ -35,7 +35,6 @@ PODS:
   - RxSwift (6.7.1)
   - SnapKit (5.7.1)
   - SwiftAlgorithms (1.0.0)
-  - Swinject (2.9.1)
   - TextFieldEffects (1.6.0)
   - Then (3.0.0)
   - WeakMapTable (1.2.0)
@@ -53,7 +52,6 @@ DEPENDENCIES:
   - RxRealm
   - RxSwift
   - SnapKit
-  - Swinject
   - TextFieldEffects
   - Then
 
@@ -75,7 +73,6 @@ SPEC REPOS:
     - RxSwift
     - SnapKit
     - SwiftAlgorithms
-    - Swinject
     - TextFieldEffects
     - Then
     - WeakMapTable
@@ -97,11 +94,10 @@ SPEC CHECKSUMS:
   RxSwift: b9a93a26031785159e11abd40d1a55bcb8057e52
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SwiftAlgorithms: 38dda4731d19027fdeee1125f973111bf3386b53
-  Swinject: a827d508c6270da03ec74e558e728917a888fa9b
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
   Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
   WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
 
-PODFILE CHECKSUM: d7409be15d1eb168b0ff5f9d7fb3824b825cf19a
+PODFILE CHECKSUM: 55f4469d3652704d0f64e6780c4594ee4a4386bd
 
 COCOAPODS: 1.15.2

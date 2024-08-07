@@ -12,6 +12,10 @@ import Then
 import Realm
 import RxRealm
 
+protocol AddWorryBindable {
+    func bindCoordinator()
+}
+
 class AddWorryViewController: BaseViewController {
     
     private let disposeBag = DisposeBag()
@@ -20,7 +24,8 @@ class AddWorryViewController: BaseViewController {
         super.viewDidLoad()
         view.backgroundColor = .clear
         setupViews() // setupViews 호출
-        setupConstraints() // setupConstraints 호출
+        setupConstraints()
+        baseView.backgroundColor = .green
     }
     
     override func setupViews() {
@@ -94,6 +99,10 @@ class AddWorryViewController: BaseViewController {
                 self?.dismiss(animated: true, completion: nil)
             })
             .disposed(by: disposeBag)
+    }
+    
+    private func bindCorrdinator() {
+        
     }
     
     lazy var baseView = UIView().then {
