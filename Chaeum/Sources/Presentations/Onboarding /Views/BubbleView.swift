@@ -47,4 +47,5 @@ class BubbleView: UIView {
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
         shapeLayer.path = circularPath(lineWidth: 0, center: center).cgPath
     }
+    
 }

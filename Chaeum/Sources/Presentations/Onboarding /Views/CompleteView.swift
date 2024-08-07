@@ -30,6 +30,8 @@ class CompleteView: UIView {
     }
     
     
+    
+    
     lazy var titleLabel = UILabel().then {
         $0.text = "Complete"
     }
@@ -40,6 +42,9 @@ class CompleteView: UIView {
         $0.titleLabel?.text = "Complete"
         $0.tintColor = .black
     }
+    
+    
+    
     
     
     

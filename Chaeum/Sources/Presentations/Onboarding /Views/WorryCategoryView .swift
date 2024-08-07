@@ -21,6 +21,7 @@ class WorryCategoryView: UIView {
         super.init(frame: frame)
         self.backgroundColor = .clear
         setupView()
+        setupConstraints()
         
         
     }
@@ -36,12 +37,17 @@ class WorryCategoryView: UIView {
         }
     }
     
+
+    
     private func setupView() {
         addSubview(titleLabel)
         addSubview(worryBox)
         addSubview(addButton)
         
         
+    }
+    
+    private func setupConstraints() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(self).inset(20)
             $0.leading.trailing.equalTo(self).inset(20)
@@ -60,6 +66,7 @@ class WorryCategoryView: UIView {
             $0.centerX.equalTo(self)
         }
     }
+    
     
     private func setupBubbles() {
         
@@ -109,6 +116,7 @@ class WorryCategoryView: UIView {
         $0.backgroundColor = .contentColor
         $0.layer.cornerRadius = 15
     }
+
    
        
        

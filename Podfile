@@ -29,7 +29,10 @@ target 'Chaeum' do
   pod 'TextFieldEffects'
   
   #DI
-  pod 'Swinject' 
+  pod 'Swinject'
+
+  #UI 
+  pod 'Charts'
   # Pods for Chaeum
 
   target 'ChaeumTests' do
